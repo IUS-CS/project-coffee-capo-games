@@ -5,8 +5,8 @@ This project is a Godot-powered game using the native GDscript language. Art is 
 [1. Description](#desription)
 [2. Controls](#controls)
 [3. Build Info](#build-info)
-[4. Authors](#license)
-[5. License](#license)
+[4. Authors](https://github.com/IUS-CS/project-coffee-capo-games/blob/main/AUTHORS.txt)
+[5. License](https://github.com/IUS-CS/project-coffee-capo-games/blob/main/LICENSE.txt)
 [6. Acknowledgements](#acknowledgements)
 
 ## Description
@@ -15,17 +15,18 @@ Arachnivania is a 2D Metroidvania. You play as Widower, a warrior spider trying 
 
 ## Controls
 
-* WASD - used for basic movement, A & D move left and right, respectively, while W & S move the camera slightly up or down.
-* SPACE - used to jump over obstacles and enemies
+* WASD - used for basic movement, A & D move left and right, respectively, while W is used to jump over obstacles and enemies.
 
 ## Build Info
 
-## Authors 
+## [Authors](https://github.com/IUS-CS/project-coffee-capo-games/blob/main/AUTHORS.txt)
 
 Ryan Goode
 Ryan Scott
 Nathan Tate
 
-## License
+## [License](https://github.com/IUS-CS/project-coffee-capo-games/blob/main/LICENSE.txt)
+
+Arachnivania uses the MIT open source license.
 
 ## Acknowledgements

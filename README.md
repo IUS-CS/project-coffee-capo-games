@@ -29,8 +29,3 @@ Arachnivania is a 2D Metroidvania. You play as Widower, a spider warrior trying 
 Coded in Godot Engine's custom GD Scipt, later built in terminal using python and scons.
 The levels are constructed using imported pixel art, with the Godot Engine's physics layers function calculating collision. All player and enemy movement is calculated using the physics functions in GD Script
 
-## [Authors](https://github.com/IUS-CS/project-coffee-capo-games/blob/main/AUTHORS.txt)
-
-Ryan Goode
-Ryan Scott
-Nathan Tate

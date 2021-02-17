@@ -26,7 +26,7 @@ Arachnivania is a 2D Metroidvania. You play as Widower, a spider warrior trying 
 
 ## Build Info
 
-To build the executable for the project, open the Godot Project in the Godot Engine, click "Project",![Godot Project Button](src/assets/Godot_Project_Button.png)
+To build the executable for the project, open the Godot Project in the Godot Engine, click "Project",![Godot Project Button](src/assets/Godot_Project_button.png)
 
 Click "Export" ![Godot Export Button](src/assets/Godot_Export_button.png)
 

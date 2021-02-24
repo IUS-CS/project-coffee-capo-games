@@ -20,6 +20,5 @@ position = Vector2( -17, -20 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -74 )
-scale = Vector2( 1.68, 1.4 )
+offset = Vector2( 0, -68 )
 current = true

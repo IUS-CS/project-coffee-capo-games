@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GodotAssets/PlayerAssets/WidowerSprite.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.1518, 5.23717 )
+extents = Vector2( 4.48507, 5.0867 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Stand"
@@ -38,6 +38,9 @@ tracks/0/keys = {
 "values": [ 20, 21, 22, 23 ]
 }
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4.75502, 5.31459 )
+
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2147483656
 script = ExtResource( 2 )
@@ -51,7 +54,7 @@ hframes = 24
 frame = 22
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.78691, 6.94888 )
+position = Vector2( -0.967391, 6.28562 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -61,3 +64,15 @@ current = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Stand = SubResource( 2 )
 anims/Walk = SubResource( 3 )
+
+[node name="EnemyDetector" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+modulate = Color( 0, 0.415686, 1, 1 )
+position = Vector2( -0.967391, 6.28562 )
+shape = SubResource( 4 )
+[connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
+[connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

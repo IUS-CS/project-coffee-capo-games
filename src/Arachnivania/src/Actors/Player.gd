@@ -1,9 +1,25 @@
 extends Actor
 
+export var stomp_impulse: = 230.0
+
+func _on_EnemyDetector_area_entered(area: Area2D) -> void:
+	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
+
+func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
+	queue_free()
+
+# This handles the left and right movement
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted = (Input.is_action_just_released("jump") 
 		and _velocity.y < 0.0)
 	var direction: = get_direction()
+	if direction.x != 0.0:
+		animationPlayer.play("Walk")
+		sprite.flip_h = direction.x < 0.0
+	else:
+		animationPlayer.play("Stand")
+#	if direction.y != 0.0:
+#		animationPlayer.play("Jump")
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
@@ -26,6 +42,11 @@ func calculate_move_velocity(
 			out.y = speed.y * direction.y
 		if is_jump_interrupted:
 			out.y = 0.0 
+		return out
+
+func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
+		var out: = linear_velocity
+		out.y = -impulse
 		return out
 
 #const ACCELERATION = 512

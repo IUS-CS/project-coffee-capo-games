@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Actor
 
 const ACCELERATION = 512
 const MAX_SPEED = 100
@@ -10,8 +10,8 @@ const JUMPFORCE = 140
 
 var motion = Vector2.ZERO
 # Use onready var to grab children nodes, like the sprite
-onready var sprite = $Sprite
-onready var animationPlayer = $AnimationPlayer
+
+
 
 # This handles the left and right movement
 func _physics_process(delta):

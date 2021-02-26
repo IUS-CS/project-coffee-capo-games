@@ -39,7 +39,10 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 2147483656
 script = ExtResource( 2 )
+speed = Vector2( 135, 230 )
+gravity = 500.0
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.3, 0.3 )

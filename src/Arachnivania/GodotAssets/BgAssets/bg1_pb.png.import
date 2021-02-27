@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/updateSpiderFramesNOTFINISHED.png-9e8fad68ac00e379a1f1b9a3669b808e.stex"
+path="res://.import/bg1_pb.png-112b0caffb5a27bea1f0bb1835ee1cbb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GodotAssets/PlayerAssets/updateSpiderFramesNOTFINISHED.png"
-dest_files=[ "res://.import/updateSpiderFramesNOTFINISHED.png-9e8fad68ac00e379a1f1b9a3669b808e.stex" ]
+source_file="res://GodotAssets/BgAssets/bg1_pb.png"
+dest_files=[ "res://.import/bg1_pb.png-112b0caffb5a27bea1f0bb1835ee1cbb.stex" ]
 
 [params]
 

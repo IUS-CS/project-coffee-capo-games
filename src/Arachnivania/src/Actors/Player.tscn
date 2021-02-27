@@ -58,20 +58,29 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 0, -50 )
 current = true
+process_mode = 0
+limit_left = 0
+limit_top = 1
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.0
+drag_margin_right = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Stand = SubResource( 2 )
 anims/Walk = SubResource( 3 )
 
 [node name="EnemyDetector" type="Area2D" parent="."]
-position = Vector2( 0, 11.3743 )
+position = Vector2( 0, 11.416 )
 monitorable = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
 modulate = Color( 0, 0.415686, 1, 1 )
-position = Vector2( -0.967391, -5.08868 )
+position = Vector2( -0.967391, -5.79271 )
 shape = SubResource( 4 )
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]

@@ -14,7 +14,7 @@ collision_layer = 2147483650
 collision_mask = 9
 script = ExtResource( 2 )
 
-[node name="willow" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -34.6105 )
 texture = ExtResource( 1 )
 flip_h = true
@@ -37,4 +37,6 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
 position = Vector2( 4.74962, -5.73315 )
 shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 [connection signal="body_entered" from="StompDetector" to="." method="_on_StompDetector_body_entered"]

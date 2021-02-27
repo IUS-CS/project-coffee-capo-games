@@ -15,7 +15,7 @@ collision_mask = 9
 script = ExtResource( 2 )
 speed = Vector2( 50, 230 )
 
-[node name="hellhornet" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1.85214, -26.493 )
 texture = ExtResource( 1 )
 
@@ -37,4 +37,6 @@ collision_layer = 2
 modulate = Color( 0, 0.415686, 1, 1 )
 position = Vector2( 0.0743256, -5.86368 )
 shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 [connection signal="body_entered" from="StompDetector" to="." method="_on_StompDetector_body_entered"]

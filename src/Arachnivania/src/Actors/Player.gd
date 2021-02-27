@@ -2,14 +2,14 @@ extends Actor
 
 export var stomp_impulse: = 230.0
 
-func _on_EnemyDetector_area_entered(area: Area2D) -> void:
+func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
-func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
+func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
 	queue_free()
 
 # This handles the left and right movement
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var is_jump_interrupted = (Input.is_action_just_released("jump") 
 		and _velocity.y < 0.0)
 	var direction: = get_direction()

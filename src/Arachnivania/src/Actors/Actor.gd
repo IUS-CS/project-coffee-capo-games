@@ -14,5 +14,5 @@ export var gravity: = 500.0
 
 var _velocity: = Vector2.ZERO
 # Use onready var to grab children nodes, like the sprite
-onready var sprite = $Sprite
-onready var animationPlayer = $AnimationPlayer
+onready var sprite: Sprite = get_node("Sprite")
+onready var animationPlayer: AnimationPlayer = get_node("AnimationPlayer")

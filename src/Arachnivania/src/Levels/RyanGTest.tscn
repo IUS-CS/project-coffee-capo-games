@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GodotAssets/BgAssets/bg2_pb.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://GodotAssets/BgAssets/bg_cloud_B.png" type="Texture" id=14]
 [ext_resource path="res://GodotAssets/BgAssets/bg_stars.png" type="Texture" id=15]
 [ext_resource path="res://src/Objects/HealthOrb.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -957,7 +958,11 @@ position = Vector2( 775.247, 100.892 )
 scale = Vector2( 0.1, 0.1 )
 
 [node name="HealthOrb4" parent="." instance=ExtResource( 16 )]
-position = Vector2( 886.003, 244.564 )
+position = Vector2( 825.595, 226.63 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="Portal2D" parent="." instance=ExtResource( 17 )]
+position = Vector2( 887.84, 256.023 )
 scale = Vector2( 0.1, 0.1 )
 
 [editable path="Player"]

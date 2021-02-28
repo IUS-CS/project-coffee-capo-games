@@ -48,8 +48,11 @@ The executable file will now be saved in the directory that you chose
 Coded in Godot Engine's custom GD Scipt, later built in terminal using python and scons.
 The levels are constructed using imported pixel art, with the Godot Engine's physics layers function calculating collision. All player and enemy movement is calculated using the physics functions in GD Script
 
-##Attribution
+## Attribution
 "Create your first 2DGame with Godot" GDQuest and contributors - www.gdquest.com
+
 "PickUp Items - Icons" Cethiel - https://opengameart.org/content/pickup-items-icons
+
 "Spider Enemies" https://www.spriters-resource.com/mobile/lastcloudia/sheet/146598/
+
 "#027 - Hell Hornet" https://www.spriters-resource.com/ds_dsi/dragonquest6realmsofrevelation/sheet/89724/

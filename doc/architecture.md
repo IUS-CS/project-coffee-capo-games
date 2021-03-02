@@ -1,6 +1,6 @@
 # Arachnivania Architecture
 
-![Arachnivania Architecture](src/assets/ScreenShots/Arachnivania_Architecture.png)
+![Arachnivania Architecture](https://github.com/IUS-CS/project-coffee-capo-games/blob/architectureRGv1/src/assets/ScreenShots/Arachnivania_Architecture.png)
 
 ## Purpose
 

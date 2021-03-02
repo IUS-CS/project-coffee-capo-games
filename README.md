@@ -26,19 +26,19 @@ Arachnivania is a 2D Metroidvania. You play as Widower, a spider warrior trying 
 
 ## Build Info
 
-To build the executable for the project, open the Godot Project in the Godot Engine, click "Project",![Godot Project Button](src/assets/ScreenShots/Godot_Project_button.png)
+To build the executable for the project, open the Godot Project in the Godot Engine, click "Project",![Godot Project Button](src/doc/images/Godot_Project_button.png)
 
-Click "Export" ![Godot Export Button](src/assets/ScreenShots/Godot_Export_button.png)
+Click "Export" ![Godot Export Button](src/doc/images/Godot_Export_button.png)
 
-Click "Add" ![Godot Add Button](src/assets/ScreenShots/Godot_Add_button.png)
+Click "Add" ![Godot Add Button](src/doc/images/Godot_Add_button.png)
 
-Select your preferred platform ![Godot Platform Button](src/assets/ScreenShots/Godot_Platform_Button.png)
+Select your preferred platform ![Godot Platform Button](src/doc/images/Godot_Platform_Button.png)
 
 With Platform builder selected and installed, click "Export Project"
-![Godot Export Project Button](src/assets/ScreenShots/Godot_Export_Project_Button.png)
+![Godot Export Project Button](src/doc/images/Godot_Export_Project_Button.png)
 
 Name your executable and place in the directory that you want, and click "Save"
-![Godot Save Button](src/assets/ScreenShots/Godot_Save_Button.png)
+![Godot Save Button](src/doc/images/Godot_Save_Button.png)
 
 The executable file will now be saved in the directory that you chose
 

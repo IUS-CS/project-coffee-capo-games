@@ -1,6 +1,6 @@
 # Arachnivania Architecture
 
-![Arachnivania Architecture](doc/images/Arachnivania_Architecture.png)
+![Arachnivania Architecture](images/Arachnivania_Architecture.png)
 
 ## Purpose
 

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pokemon BlueRed - Mt. Moon.ogg-c881b768546db398784cdf9f478fc90c.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Pokemon BlueRed - Mt. Moon.ogg"
+dest_files=[ "res://.import/Pokemon BlueRed - Mt. Moon.ogg-c881b768546db398784cdf9f478fc90c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

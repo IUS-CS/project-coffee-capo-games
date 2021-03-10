@@ -80,3 +80,15 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 #		if x_input == 0: 
 #			motion.x = lerp(motion.x, 0, AIR_RESISTANCE)
 #	motion = move_and_slide(motion,Vector2.UP)
+
+
+func _on_Fallzone_body_entered(body):
+	get_tree().change_scene("res://src/Levels/RyanSCave.tscn")
+
+
+func _on_Exit_body_entered(body):
+	get_tree().change_scene("res://src/Levels/RyanSGrassland.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene("res://src/Levels/RyanSCave.tscn")

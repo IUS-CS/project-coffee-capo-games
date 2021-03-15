@@ -13,7 +13,7 @@ folders have many operations and attributes in common, such as moving and copyin
 attributes such as file name and size, it would be easier and more convenient to treat both file and folder objects uniformly 
 by defining a File System Resource Interface."
 
-![Composite](/images/composite-design-pattern-implementation-uml-class-diagram.png)
+![Composite](images/composite-design-pattern-implementation-uml-class-diagram.png)
 
 Another aspect of Godot's design is aggregation. This is the premise of the .tscn files. Each object will be an aggregate of assets
 and codes, which then can be used to aggregate on other .tscn files.
@@ -23,15 +23,13 @@ and codes, which then can be used to aggregate on other .tscn files.
 In order to better organize the code and allow for ease of expansion and consolidation, we have decided to implement a Finite State
 Machine, or State Design. This will work nicely with the already used Composite Design (see implementation). 
 
-![State](/images/state-diagram.png)
+![State](images/state-diagram.png)
 
 If we were to create just one class that would have all of the abilities and states combined, it would eventually become unmanageble.
 This would also increase the chances of bugs. The goal of this pattern is to seperate every state into its own unique object. The state
 machine is a class that keeps track of the current state and is responsible for state transition. The benefits to this is that each state
 only access the properties it needs, behaviors can be easily reused without the need to duplicate code, debugging will be easier due
 to easily identifible files and the state machine is a generic and reusable component that can be shared within the code base.
-
-Source: https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/
 
 ## implementation
 
@@ -134,7 +132,11 @@ func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:
 Next the state pattern will need to be added to the .tscn files by attaching the state pattern script to the root node 
 and finite state machine to a new node that will have the different states as children nodes.
 
-![StateNodes](/images/player-scene-done.png)
+![StateNodes](images/player-scene-done.png)
 
 The code that defines the states behavior will then be attached to its corresponding node. This is where you can see how well
 the State Pattern works alongside the Composite/aggregate Pattern.
+
+### Sources
+https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/
+https://www.oodesign.com/composite-pattern.html

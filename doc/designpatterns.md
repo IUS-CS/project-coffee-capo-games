@@ -133,8 +133,8 @@ func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:
 	state.enter(msg)
 	emit_signal("transitioned", state.name)
 ```
-Next the state pattern will need to be added to the .tscn files by attaching the state pattern script to the root node 
-and finite state machine to a new node that will have the different states as children nodes.
+Next the these two scripts will need to be added to the .tscn files by attaching the state pattern to the root node 
+and finite state machine to a new node that will have the different states as child nodes.
 
 <p align="center">
   <img src="images/player-scene-done.png">
@@ -145,4 +145,5 @@ the State Pattern works alongside the Composite/aggregate Pattern.
 
 ### Sources
 https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/
+
 https://www.oodesign.com/composite-pattern.html

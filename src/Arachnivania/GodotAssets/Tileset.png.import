@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tileset.png-508cc9ce2f90cabfd431be2296923a80.stex"
+path="res://.import/Tileset.png-a1d68ce8b198396cc7dd389d627f4975.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GodotAssets/BgAssets/Tileset.png"
-dest_files=[ "res://.import/Tileset.png-508cc9ce2f90cabfd431be2296923a80.stex" ]
+source_file="res://GodotAssets/Tileset.png"
+dest_files=[ "res://.import/Tileset.png-a1d68ce8b198396cc7dd389d627f4975.stex" ]
 
 [params]
 

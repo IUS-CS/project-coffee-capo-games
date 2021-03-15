@@ -14,7 +14,7 @@ attributes such as file name and size, it would be easier and more convenient to
 by defining a File System Resource Interface."
 
 <p align="center">
-  <img width="460" height="300" src="images/composite-design-pattern-implementation-uml-class-diagram.png">
+  <img src="images/composite-design-pattern-implementation-uml-class-diagram.png">
 </p>
 
 ![Composite](images/composite-design-pattern-implementation-uml-class-diagram.png)

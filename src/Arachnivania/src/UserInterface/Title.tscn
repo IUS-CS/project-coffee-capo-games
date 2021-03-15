@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="Title" type="Label"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.5
+margin_top = -82.0
+margin_right = 40.5
+margin_bottom = -68.0
+text = "Arachnivania"
+__meta__ = {
+"_edit_use_anchors_": false
+}

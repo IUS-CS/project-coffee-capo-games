@@ -13,6 +13,10 @@ folders have many operations and attributes in common, such as moving and copyin
 attributes such as file name and size, it would be easier and more convenient to treat both file and folder objects uniformly 
 by defining a File System Resource Interface."
 
+<p align="center">
+  <img width="460" height="300" src="images/composite-design-pattern-implementation-uml-class-diagram.png">
+</p>
+
 ![Composite](images/composite-design-pattern-implementation-uml-class-diagram.png)
 
 Another aspect of Godot's design is aggregation. This is the premise of the .tscn files. Each object will be an aggregate of assets

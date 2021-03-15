@@ -35,7 +35,7 @@ machine is a class that keeps track of the current state and is responsible for 
 only access the properties it needs, behaviors can be easily reused without the need to duplicate code, debugging will be easier due
 to easily identifible files and the state machine is a generic and reusable component that can be shared within the code base.
 
-## implementation
+## Implementation
 
 First we will need to create the state class and the finite state machine.
 

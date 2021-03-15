@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Green Tileset.png-ed71defb0ed51a77075f020a053929cb.stex"
+path="res://.import/Green Tileset.png-6d6abd3886829e4e58cdb0ad6b4aa0b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GodotAssets/Green Tileset.png"
-dest_files=[ "res://.import/Green Tileset.png-ed71defb0ed51a77075f020a053929cb.stex" ]
+source_file="res://GodotAssets/BgAssets/Green Tileset.png"
+dest_files=[ "res://.import/Green Tileset.png-6d6abd3886829e4e58cdb0ad6b4aa0b7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

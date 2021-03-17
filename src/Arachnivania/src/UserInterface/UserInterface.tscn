@@ -1,4 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/RetryButton.tscn" type="PackedScene" id=4]
 
 [node name="UserInterface" type="Control"]
 anchor_right = 1.0
@@ -6,3 +11,66 @@ anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PlayerData" type="VBoxContainer" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 77.0
+margin_bottom = 40.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health" type="Label" parent="PlayerData"]
+margin_right = 69.0
+margin_bottom = 14.0
+text = "Health: %s"
+align = 1
+
+[node name="Experience" type="Label" parent="PlayerData"]
+margin_top = 18.0
+margin_right = 69.0
+margin_bottom = 32.0
+text = "XP: %s"
+align = 1
+
+[node name="PauseOverlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.235294 )
+
+[node name="Title" parent="PauseOverlay" instance=ExtResource( 3 )]
+margin_top = -72.0
+margin_bottom = -58.0
+text = "Paused"
+align = 1
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.0
+margin_top = -40.0
+margin_right = 48.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
+margin_right = 95.0
+margin_bottom = 24.0
+
+[node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 1 )]
+margin_top = 28.0
+margin_right = 95.0
+margin_bottom = 52.0
+text = "Main Menu"
+next_scene_path = "res://src/Screens/MainScreen.tscn"
+
+[node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
+margin_top = 56.0
+margin_right = 95.0
+margin_bottom = 80.0

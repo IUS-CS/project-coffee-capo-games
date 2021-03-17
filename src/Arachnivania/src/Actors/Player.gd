@@ -54,6 +54,7 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 func die() -> void:
 	queue_free()
 
+#For RyanS test levels
 func _on_Fallzone_body_entered(body):
 	get_tree().change_scene("res://src/Levels/RyanSCave.tscn")
 

@@ -465,6 +465,7 @@ __meta__ = {
 }
 
 [node name="UI" type="CanvasLayer" parent="."]
+layer = 100
 
 [node name="UserInterface" parent="UI" instance=ExtResource( 8 )]
 

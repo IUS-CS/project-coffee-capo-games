@@ -20,7 +20,7 @@ Members present:
 * Added new level background art that matches the color palette of the rest of the level<br>
   Here are screenshots of what we did:
   
-  ![Thing](/doc/sprint2Screenshot.png)
+  ![Thing](images/sprint2Screenshot.png)
   
 ### Good
   

@@ -5,7 +5,7 @@ onready var animationPlayer: AnimationPlayer = get_node("AnimationPlayer")
 export var health: = 20
 
 func _on_body_entered(_body: PhysicsBody2D) -> void:
-	if PlayerData.health <= 100:
+	if PlayerData.health < 100:
 		picked()
 
 func picked() -> void:

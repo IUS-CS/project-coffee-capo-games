@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GodotAssets/BgAssets/bg2_pb.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://GodotAssets/BgAssets/bg_stars.png" type="Texture" id=15]
 [ext_resource path="res://src/Objects/HealthOrb.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -467,15 +468,18 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="RyanGTest" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ -128.0 ],
 "_edit_vertical_guides_": [ 912.039 ]
 }
 
-[node name="Level" type="Node" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 128
 
-[node name="bg3_pb" type="TextureRect" parent="Level"]
+[node name="UserInterface" parent="UI" instance=ExtResource( 18 )]
+
+[node name="bg3_pb" type="TextureRect" parent="."]
 margin_top = -200.0
 margin_right = 320.0
 margin_bottom = -16.0
@@ -484,7 +488,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_stars" type="TextureRect" parent="Level/bg3_pb"]
+[node name="bg_stars" type="TextureRect" parent="bg3_pb"]
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 15 )
@@ -492,7 +496,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B2" type="TextureRect" parent="Level/bg3_pb/bg_stars"]
+[node name="bg_cloud_B2" type="TextureRect" parent="bg3_pb/bg_stars"]
 margin_left = 283.067
 margin_top = 16.0
 margin_right = 301.067
@@ -502,7 +506,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_B2"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_B2"]
 margin_left = -40.0
 margin_top = -6.0
 margin_right = 7.0
@@ -512,7 +516,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_E2" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_B2"]
+[node name="bg_cloud_E2" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_B2"]
 margin_left = -24.0
 margin_top = 8.0
 margin_right = 40.0
@@ -522,7 +526,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg2_pb" type="TextureRect" parent="Level/bg3_pb/bg_stars"]
+[node name="bg2_pb" type="TextureRect" parent="bg3_pb/bg_stars"]
 margin_top = 16.0
 margin_right = 320.0
 margin_bottom = 200.0
@@ -531,7 +535,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg1_pb" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg2_pb"]
+[node name="bg1_pb" type="TextureRect" parent="bg3_pb/bg_stars/bg2_pb"]
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 8 )
@@ -539,7 +543,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B" type="TextureRect" parent="Level/bg3_pb/bg_stars"]
+[node name="bg_cloud_B" type="TextureRect" parent="bg3_pb/bg_stars"]
 margin_left = 33.15
 margin_top = 64.0
 margin_right = 51.15
@@ -549,14 +553,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_C" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_B"]
+[node name="bg_cloud_C" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_B"]
 margin_left = 6.85
 margin_top = -16.0
 margin_right = 48.85
 margin_bottom = 3.0
 texture = ExtResource( 10 )
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_B"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_B"]
 margin_left = -32.0
 margin_top = -19.0
 margin_right = 15.0
@@ -566,7 +570,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B3" type="TextureRect" parent="Level/bg3_pb/bg_stars"]
+[node name="bg_cloud_B3" type="TextureRect" parent="bg3_pb/bg_stars"]
 margin_left = 128.0
 margin_top = 35.0
 margin_right = 146.0
@@ -576,14 +580,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_C" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_B3"]
+[node name="bg_cloud_C" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_B3"]
 margin_left = 6.85
 margin_top = -16.0
 margin_right = 48.85
 margin_bottom = 3.0
 texture = ExtResource( 10 )
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_B3"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_B3"]
 margin_left = -32.0
 margin_top = -19.0
 margin_right = 15.0
@@ -593,7 +597,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_D" type="TextureRect" parent="Level/bg3_pb/bg_stars"]
+[node name="bg_cloud_D" type="TextureRect" parent="bg3_pb/bg_stars"]
 margin_left = 184.0
 margin_top = 50.0
 margin_right = 228.0
@@ -603,14 +607,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_E" type="TextureRect" parent="Level/bg3_pb/bg_stars/bg_cloud_D"]
+[node name="bg_cloud_E" type="TextureRect" parent="bg3_pb/bg_stars/bg_cloud_D"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 72.0
 margin_bottom = 34.0
 texture = ExtResource( 12 )
 
-[node name="bg3_pb2" type="TextureRect" parent="Level"]
+[node name="bg3_pb2" type="TextureRect" parent="."]
 margin_left = 320.0
 margin_top = -200.0
 margin_right = 640.0
@@ -620,7 +624,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_stars" type="TextureRect" parent="Level/bg3_pb2"]
+[node name="bg_stars" type="TextureRect" parent="bg3_pb2"]
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 15 )
@@ -628,7 +632,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B2" type="TextureRect" parent="Level/bg3_pb2/bg_stars"]
+[node name="bg_cloud_B2" type="TextureRect" parent="bg3_pb2/bg_stars"]
 margin_left = 283.067
 margin_top = 16.0
 margin_right = 301.067
@@ -638,7 +642,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_B2"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_B2"]
 margin_left = -40.0
 margin_top = -6.0
 margin_right = 7.0
@@ -648,7 +652,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_E2" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_B2"]
+[node name="bg_cloud_E2" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_B2"]
 margin_left = -24.0
 margin_top = 8.0
 margin_right = 40.0
@@ -658,7 +662,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg2_pb" type="TextureRect" parent="Level/bg3_pb2/bg_stars"]
+[node name="bg2_pb" type="TextureRect" parent="bg3_pb2/bg_stars"]
 margin_top = 16.0
 margin_right = 320.0
 margin_bottom = 200.0
@@ -667,7 +671,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg1_pb" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg2_pb"]
+[node name="bg1_pb" type="TextureRect" parent="bg3_pb2/bg_stars/bg2_pb"]
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 8 )
@@ -675,7 +679,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B" type="TextureRect" parent="Level/bg3_pb2/bg_stars"]
+[node name="bg_cloud_B" type="TextureRect" parent="bg3_pb2/bg_stars"]
 margin_left = 33.15
 margin_top = 64.0
 margin_right = 51.15
@@ -685,14 +689,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_C" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_B"]
+[node name="bg_cloud_C" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_B"]
 margin_left = 6.85
 margin_top = -16.0
 margin_right = 48.85
 margin_bottom = 3.0
 texture = ExtResource( 10 )
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_B"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_B"]
 margin_left = -32.0
 margin_top = -19.0
 margin_right = 15.0
@@ -702,7 +706,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B3" type="TextureRect" parent="Level/bg3_pb2/bg_stars"]
+[node name="bg_cloud_B3" type="TextureRect" parent="bg3_pb2/bg_stars"]
 margin_left = 128.0
 margin_top = 35.0
 margin_right = 146.0
@@ -712,14 +716,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_C" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_B3"]
+[node name="bg_cloud_C" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_B3"]
 margin_left = 6.85
 margin_top = -16.0
 margin_right = 48.85
 margin_bottom = 3.0
 texture = ExtResource( 10 )
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_B3"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_B3"]
 margin_left = -32.0
 margin_top = -19.0
 margin_right = 15.0
@@ -729,7 +733,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_D" type="TextureRect" parent="Level/bg3_pb2/bg_stars"]
+[node name="bg_cloud_D" type="TextureRect" parent="bg3_pb2/bg_stars"]
 margin_left = 184.0
 margin_top = 50.0
 margin_right = 228.0
@@ -739,14 +743,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_E" type="TextureRect" parent="Level/bg3_pb2/bg_stars/bg_cloud_D"]
+[node name="bg_cloud_E" type="TextureRect" parent="bg3_pb2/bg_stars/bg_cloud_D"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 72.0
 margin_bottom = 34.0
 texture = ExtResource( 12 )
 
-[node name="bg3_pb3" type="TextureRect" parent="Level"]
+[node name="bg3_pb3" type="TextureRect" parent="."]
 margin_left = 640.0
 margin_top = -200.0
 margin_right = 960.0
@@ -756,7 +760,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_stars" type="TextureRect" parent="Level/bg3_pb3"]
+[node name="bg_stars" type="TextureRect" parent="bg3_pb3"]
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 15 )
@@ -764,7 +768,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B2" type="TextureRect" parent="Level/bg3_pb3/bg_stars"]
+[node name="bg_cloud_B2" type="TextureRect" parent="bg3_pb3/bg_stars"]
 margin_left = 283.067
 margin_top = 16.0
 margin_right = 301.067
@@ -774,7 +778,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_B2"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_B2"]
 margin_left = -40.0
 margin_top = -6.0
 margin_right = 7.0
@@ -784,7 +788,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_E2" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_B2"]
+[node name="bg_cloud_E2" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_B2"]
 margin_left = -24.0
 margin_top = 8.0
 margin_right = 40.0
@@ -794,7 +798,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg2_pb" type="TextureRect" parent="Level/bg3_pb3/bg_stars"]
+[node name="bg2_pb" type="TextureRect" parent="bg3_pb3/bg_stars"]
 margin_top = 16.0
 margin_right = 320.0
 margin_bottom = 200.0
@@ -803,7 +807,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg1_pb" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg2_pb"]
+[node name="bg1_pb" type="TextureRect" parent="bg3_pb3/bg_stars/bg2_pb"]
 margin_right = 320.0
 margin_bottom = 184.0
 texture = ExtResource( 8 )
@@ -811,7 +815,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B" type="TextureRect" parent="Level/bg3_pb3/bg_stars"]
+[node name="bg_cloud_B" type="TextureRect" parent="bg3_pb3/bg_stars"]
 margin_left = 33.15
 margin_top = 64.0
 margin_right = 51.15
@@ -821,14 +825,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_C" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_B"]
+[node name="bg_cloud_C" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_B"]
 margin_left = 6.85
 margin_top = -16.0
 margin_right = 48.85
 margin_bottom = 3.0
 texture = ExtResource( 10 )
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_B"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_B"]
 margin_left = -32.0
 margin_top = -19.0
 margin_right = 15.0
@@ -838,7 +842,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_B3" type="TextureRect" parent="Level/bg3_pb3/bg_stars"]
+[node name="bg_cloud_B3" type="TextureRect" parent="bg3_pb3/bg_stars"]
 margin_left = 128.0
 margin_top = 35.0
 margin_right = 146.0
@@ -848,14 +852,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_C" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_B3"]
+[node name="bg_cloud_C" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_B3"]
 margin_left = 6.85
 margin_top = -16.0
 margin_right = 48.85
 margin_bottom = 3.0
 texture = ExtResource( 10 )
 
-[node name="bg_cloud_A" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_B3"]
+[node name="bg_cloud_A" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_B3"]
 margin_left = -32.0
 margin_top = -19.0
 margin_right = 15.0
@@ -865,7 +869,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_D" type="TextureRect" parent="Level/bg3_pb3/bg_stars"]
+[node name="bg_cloud_D" type="TextureRect" parent="bg3_pb3/bg_stars"]
 margin_left = 184.0
 margin_top = 50.0
 margin_right = 228.0
@@ -875,12 +879,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg_cloud_E" type="TextureRect" parent="Level/bg3_pb3/bg_stars/bg_cloud_D"]
+[node name="bg_cloud_E" type="TextureRect" parent="bg3_pb3/bg_stars/bg_cloud_D"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 72.0
 margin_bottom = 34.0
 texture = ExtResource( 12 )
+
+[node name="Level" type="Node" parent="."]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="Level"]
 layer = -50

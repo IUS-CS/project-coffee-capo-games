@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Arachnivania"
 run/main_scene="res://src/Screens/MainScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://GodotAssets/PlayerAssets/willow.png"
 
 [autoload]
 

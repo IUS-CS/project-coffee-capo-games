@@ -1,6 +1,6 @@
 extends "res://addons/gut/test.gd"
 
-var Player = preload("res://src/Actors/Player.gd")
+var Player = preload("res://srcPreState/Actors/Player.gd")
 
 func test_start_no_input_left():
 	var player = Player.new()
@@ -93,3 +93,4 @@ func test_direction_jump():
 		"Player jumps when input pressed"
 	)
 	Input.action_release("jump")
+

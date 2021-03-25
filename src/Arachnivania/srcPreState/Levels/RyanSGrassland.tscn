@@ -4,10 +4,17 @@
 [ext_resource path="res://GodotAssets/Tilesets/Tileset.png" type="Texture" id=2]
 [ext_resource path="res://GodotAssets/BgAssets/bg2.png" type="Texture" id=3]
 [ext_resource path="res://GodotAssets/BgAssets/GrassyPlainsGreen.png" type="Texture" id=4]
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://srcPreState/Actors/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GodotAssets/BgAssets/Green Tileset.png" type="Texture" id=6]
 [ext_resource path="res://GodotAssets/BgAssets/Mockup.png" type="Texture" id=7]
 [ext_resource path="res://GodotAssets/Music (.ogg)/Pokemon BlueRed - Route 11.ogg" type="AudioStream" id=8]
+
+
+
+
+
+
+
 
 
 [sub_resource type="ConvexPolygonShape2D" id=1]

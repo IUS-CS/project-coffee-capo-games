@@ -1,12 +1,15 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://src/UserInterface/QuitButton.gd" type="Script" id=1]
+[ext_resource path="res://srcPreState/UserInterface/RetryButton.gd" type="Script" id=1]
 
-[node name="QuitButton" type="Button"]
+
+
+
+[node name="RetryButton" type="Button"]
 margin_right = 161.0
 margin_bottom = 26.0
 size_flags_vertical = 3
-text = "Quit"
+text = "Retry"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

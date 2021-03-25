@@ -28,7 +28,7 @@ func _physics_process(_delta: float) -> void:
 func get_direction() -> Vector2:
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
-		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 1.0
+		-1.0 if Input.is_action_just_pressed("jump") and is_on_floor() else 0.0
 	)
 
 func calculate_move_velocity(
@@ -43,7 +43,7 @@ func calculate_move_velocity(
 		if direction.y ==  -1.0:
 			out.y = speed.y * direction.y
 		if is_jump_interrupted:
-			out.y = 1.0 
+			out.y = 0.0 
 		return out
 
 func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vector2:
@@ -54,14 +54,14 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 func die() -> void:
 	queue_free()
 
-#For RyanS test levels
-func _on_Fallzone_body_entered(body):
-	get_tree().change_scene("res://src/Levels/RyanSCave.tscn")
-
-
-func _on_Exit_body_entered(body):
-	get_tree().change_scene("res://src/Levels/RyanSGrassland.tscn")
-
-
-func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://src/Levels/RyanSCave.tscn")
+##For RyanS test levels
+#func _on_Fallzone_body_entered(body):
+#	get_tree().change_scene("res://srcPreState/Levels/RyanSCave.tscn")
+#
+#
+#func _on_Exit_body_entered(body):
+#	get_tree().change_scene("res://srcPreState/Levels/RyanSGrassland.tscn")
+#
+#
+#func _on_Area2D_body_entered(body):
+#	get_tree().change_scene("res://srcPreState/Levels/RyanSCave.tscn")

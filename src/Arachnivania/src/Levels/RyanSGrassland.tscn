@@ -1,13 +1,14 @@
 [gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://GodotAssets/BgAssets/black_bg.png" type="Texture" id=1]
-[ext_resource path="res://GodotAssets/Tileset.png" type="Texture" id=2]
+[ext_resource path="res://GodotAssets/Tilesets/Tileset.png" type="Texture" id=2]
 [ext_resource path="res://GodotAssets/BgAssets/bg2.png" type="Texture" id=3]
 [ext_resource path="res://GodotAssets/BgAssets/GrassyPlainsGreen.png" type="Texture" id=4]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GodotAssets/BgAssets/Green Tileset.png" type="Texture" id=6]
 [ext_resource path="res://GodotAssets/BgAssets/Mockup.png" type="Texture" id=7]
 [ext_resource path="res://GodotAssets/Music (.ogg)/Pokemon BlueRed - Route 11.ogg" type="AudioStream" id=8]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

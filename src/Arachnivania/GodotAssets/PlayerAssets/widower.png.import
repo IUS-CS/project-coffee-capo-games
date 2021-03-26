@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/willow.png-56fa814ce43ccc392a43ed7169dee12f.stex"
+path="res://.import/widower.png-704dd8f00837a9386438290e6bcadf2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GodotAssets/PlayerAssets/willow.png"
-dest_files=[ "res://.import/willow.png-56fa814ce43ccc392a43ed7169dee12f.stex" ]
+source_file="res://GodotAssets/PlayerAssets/widower.png"
+dest_files=[ "res://.import/widower.png-704dd8f00837a9386438290e6bcadf2b.stex" ]
 
 [params]
 

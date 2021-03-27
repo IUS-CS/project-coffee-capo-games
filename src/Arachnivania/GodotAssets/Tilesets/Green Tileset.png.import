@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Green Tileset 2.png-3d748b342a3942f033fcc2ec745911a7.stex"
+path="res://.import/Green Tileset.png-95036509332e679f33cbbdea7a7232c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GodotAssets/BgAssets/Green Tileset 2.png"
-dest_files=[ "res://.import/Green Tileset 2.png-3d748b342a3942f033fcc2ec745911a7.stex" ]
+source_file="res://GodotAssets/Tilesets/Green Tileset.png"
+dest_files=[ "res://.import/Green Tileset.png-95036509332e679f33cbbdea7a7232c9.stex" ]
 
 [params]
 

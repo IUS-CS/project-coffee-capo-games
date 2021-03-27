@@ -305,6 +305,7 @@ tile_data = PoolIntArray( 0, 4, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="Widower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 94, 225 )
 >>>>>>> 3704b72... Template Level
@@ -324,3 +325,7 @@ position = Vector2( 90, 230 )
 [node name="Widower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 94, 225 )
 >>>>>>> 3704b72... Template Level
+=======
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 90, 230 )
+>>>>>>> 95667ce... Building Player.tscn and Player.gd script

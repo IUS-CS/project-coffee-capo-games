@@ -1,5 +1,6 @@
 extends State
 
+<<<<<<< HEAD
 #Base interface function from state, delegates to Move
 func unhandled_input(event: InputEvent) -> void:
 	var move: = get_parent()
@@ -32,3 +33,5 @@ func enter(msg: Dictionary = {}) -> void:
 func exit() -> void:
 	var move: = get_parent()
 	move.exit()
+=======
+>>>>>>> 95667ce... Building Player.tscn and Player.gd script

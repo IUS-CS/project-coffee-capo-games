@@ -24,7 +24,7 @@ func physics_process(delta: float) -> void:
 	)
 	velocity = owner.move_and_slide(velocity, owner.FLOOR_NORMAL)
 	#signal for the CameraRig
-	#Events.emit_signal("player_moved", owner)
+	Events.emit_signal("player_moved", owner)
 
 #static functions are for calulations and do not have access to other members of the class
 static func calculate_velocity(

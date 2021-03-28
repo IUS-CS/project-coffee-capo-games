@@ -288,11 +288,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 16/z_index = 0
 
-<<<<<<< HEAD
 [node name="Template01" type="Node2D"]
-=======
-[node name="Node2D" type="Node2D"]
->>>>>>> 3704b72... Template Level
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 7 )
@@ -313,6 +309,7 @@ position = Vector2( 94, 225 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 90, 230 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 95667ce... Building Player.tscn and Player.gd script
 =======
 
@@ -329,3 +326,7 @@ position = Vector2( 94, 225 )
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 90, 230 )
 >>>>>>> 95667ce... Building Player.tscn and Player.gd script
+=======
+
+[editable path="Player"]
+>>>>>>> b28493b... Camera and Parent Move state

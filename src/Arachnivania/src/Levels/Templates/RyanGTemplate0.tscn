@@ -305,4 +305,9 @@ position = Vector2( 94, 225 )
 =======
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 90, 230 )
+<<<<<<< HEAD
 >>>>>>> 95667ce... Building Player.tscn and Player.gd script
+=======
+
+[editable path="Player"]
+>>>>>>> b28493b... Camera and Parent Move state

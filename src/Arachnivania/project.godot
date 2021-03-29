@@ -32,8 +32,8 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Actor": "",
 "Player": "",
-"State": "res://GodotAssets/Icons/state.svg",
-"StateMachine": "res://GodotAssets/Icons/state_machine.svg"
+"State": "",
+"StateMachine": ""
 }
 
 [application]

@@ -20,11 +20,11 @@ func unhandled_input(event: InputEvent) -> void:
 func physics_process(delta: float) -> void:
 	return
 
-#allows states to pass data to one another
+#allows states to pass data to one another, defined in child states
 func enter(msg: Dictionary = {}) -> void:
 	return
 
-#exit the state
+#exit the state, defined by child states
 func exit() -> void:
 	return
 

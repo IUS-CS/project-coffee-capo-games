@@ -57,6 +57,7 @@ margin_right = 202.0
 margin_bottom = 32.0
 text = ""
 icon = ExtResource( 4 )
+flat = true
 next_scene_path = "res://srcPreState/Levels/RyanGTest.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 3 )]
@@ -65,3 +66,4 @@ margin_right = 202.0
 margin_bottom = 68.0
 text = ""
 icon = ExtResource( 5 )
+flat = true

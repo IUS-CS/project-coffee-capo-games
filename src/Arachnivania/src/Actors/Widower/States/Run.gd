@@ -16,10 +16,7 @@ func physics_process(delta: float) -> void:
 		_state_machine.transition_to("Move/Idle")
 	elif not owner.is_on_floor():
 		_state_machine.transition_to("Move/Air")
-<<<<<<< HEAD
 	#delegates physics process to move
-=======
->>>>>>> 3aa1ee9... Run State
 	move.physics_process(delta)
 
 #Base interface function from state to delegate to the parent state Move

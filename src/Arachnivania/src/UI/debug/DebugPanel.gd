@@ -7,7 +7,7 @@ E.g. properties = PoolStringArray(['speed', 'position', 'modulate'])
 """
 
 onready var _container: VBoxContainer = $VBoxContainer/MarginContainer/VBoxContainer
-onready var _title: Label = $VBoxContainer/ReferenceName
+onready var _title: Label = $VBoxContainer/Reference
 
 onready var reference: Node = get_node(reference_path) setget set_reference
 

@@ -59,6 +59,7 @@ anims/Walk = SubResource( 3 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 2 )
+initial_state = NodePath("Move/Idle")
 
 [node name="Move" type="Node" parent="StateMachine"]
 script = ExtResource( 3 )

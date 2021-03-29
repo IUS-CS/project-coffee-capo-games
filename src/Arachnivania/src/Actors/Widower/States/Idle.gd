@@ -21,6 +21,7 @@ func enter(msg: Dictionary = {}) -> void:
 	move.max_speed = move.max_speed_default
 	move.velocity = Vector2.ZERO
 
-#Base interface function from state to delegate to the parent state Move
+#Base interface function from state to exit state
 func exit() -> void:
-	return
+	var move: = get_parent()
+	move.exit()

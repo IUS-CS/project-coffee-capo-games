@@ -4,9 +4,6 @@
 [ext_resource path="res://srcPreState/Objects/Portal2D.gd" type="Script" id=2]
 [ext_resource path="res://srcPreState/Levels/RyanGTest2.tscn" type="PackedScene" id=3]
 
-
-
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 68.6664
 height = 68.0933

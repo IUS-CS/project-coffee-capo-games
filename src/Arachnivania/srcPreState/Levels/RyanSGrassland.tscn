@@ -9,14 +9,6 @@
 [ext_resource path="res://GodotAssets/BgAssets/Mockup.png" type="Texture" id=7]
 [ext_resource path="res://GodotAssets/Music (.ogg)/Pokemon BlueRed - Route 11.ogg" type="AudioStream" id=8]
 
-
-
-
-
-
-
-
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 

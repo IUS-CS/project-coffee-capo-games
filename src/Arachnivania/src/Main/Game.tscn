@@ -93,6 +93,11 @@ position = Vector2( 112.827, 142.048 )
 [node name="CameraRig" parent="Player" index="0"]
 offset = Vector2( 150, 150 )
 
+[node name="Move" parent="Player/StateMachine" index="0"]
+max_speed_default = Vector2( 135, 230 )
+acceleration_default = Vector2( 5000, 500 )
+jump_impulse = 190.0
+
 [editable path="CanvasLayer/DebugDock/Column/DebugPanel"]
 
 [editable path="CanvasLayer/DebugDock/Column/DebugPanel2"]

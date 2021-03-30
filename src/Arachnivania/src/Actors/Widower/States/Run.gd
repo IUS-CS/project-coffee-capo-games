@@ -9,9 +9,13 @@ func unhandled_input(event: InputEvent) -> void:
 func physics_process(delta: float) -> void:
 	var move: = get_parent()
 <<<<<<< HEAD
+<<<<<<< HEAD
 	#Transitions to other states based on direction and position
 =======
 >>>>>>> 3aa1ee9... Run State
+=======
+	#Transitions to other states based on direction and position
+>>>>>>> f351235... Added Air state and tweaked movement
 	if owner.is_on_floor() and move.get_move_direction().x == 0.0:
 		_state_machine.transition_to("Move/Idle")
 	elif not owner.is_on_floor():

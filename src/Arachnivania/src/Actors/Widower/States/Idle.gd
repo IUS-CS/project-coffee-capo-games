@@ -8,6 +8,7 @@ func unhandled_input(event: InputEvent) -> void:
 #Base interface function from state, defines Idle and transitions
 func physics_process(delta: float) -> void:
 	var move: = get_parent()
+	#Transitions to other states based on direction and position
 	if owner.is_on_floor() and move.get_move_direction().x != 0.0:
 		_state_machine.transition_to("Move/Run")
 	elif not owner.is_on_floor():
@@ -18,6 +19,7 @@ func physics_process(delta: float) -> void:
 func enter(msg: Dictionary = {}) -> void:
 	var move: = get_parent()
 	move.enter(msg)
+	#Sets default max speed and velocity on enter to idle
 	move.max_speed = move.max_speed_default
 	move.velocity = Vector2.ZERO
 

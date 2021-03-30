@@ -8,7 +8,7 @@ Generic State Machine. Initializes states and delgates engine callbacks
 #allows the setting of an initial state from the inspector
 export var initial_state: = NodePath()
 
-#active state variable that starts as the initial stat and uses a setter to change
+#active state variable that starts as the initial state and uses a setter to change
 onready var state: State = get_node(initial_state) setget set_state
 #allows for printing of state name for debugging
 onready var _state_name: = state.name
@@ -18,8 +18,7 @@ onready var _state_name: = state.name
 func _init() -> void:
 	add_to_group("state_machine")
 
-#waits for the owner node of the state machine to emit a ready signal before
-#entering the initial state 
+#waits for the owner node of the state machine to emit a ready signal before entering the initial state 
 func _ready() -> void:
 	yield(owner, "ready")
 	state.enter()

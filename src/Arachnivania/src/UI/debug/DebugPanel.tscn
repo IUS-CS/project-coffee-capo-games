@@ -8,6 +8,8 @@
 modulate = Color( 1, 1, 1, 0.87451 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -279.0
+margin_bottom = -198.0
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -15,11 +17,14 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 400.0
-margin_bottom = 240.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 114.0
+margin_bottom = 35.0
+custom_constants/separation = 0
 
 [node name="Reference" type="Label" parent="VBoxContainer"]
-margin_right = 400.0
+margin_right = 107.0
 margin_bottom = 14.0
 rect_min_size = Vector2( 0, 14 )
 custom_fonts/font = ExtResource( 2 )
@@ -28,9 +33,9 @@ align = 1
 valign = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 17.0
-margin_right = 400.0
-margin_bottom = 240.0
+margin_top = 14.0
+margin_right = 107.0
+margin_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 0
@@ -41,7 +46,8 @@ custom_constants/margin_bottom = 3
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
 margin_left = 3.0
 margin_top = 3.0
-margin_right = 400.0
-margin_bottom = 220.0
+margin_right = 107.0
+margin_bottom = 11.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 0

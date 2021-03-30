@@ -49,6 +49,7 @@ text = "XP: %s"
 align = 1
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.235294 )
@@ -57,8 +58,10 @@ __meta__ = {
 }
 
 [node name="Title" parent="PauseOverlay" instance=ExtResource( 3 )]
-margin_top = -72.0
-margin_bottom = -58.0
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_top = 36.48
+margin_bottom = 50.48
 text = "Paused"
 align = 1
 
@@ -67,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -47.0
-margin_top = -40.0
-margin_right = 48.0
-margin_bottom = 40.0
+margin_left = -86.0
+margin_top = -52.0
+margin_right = 86.0
+margin_bottom = 52.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -78,17 +81,17 @@ __meta__ = {
 [node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
 margin_left = 0.0
 margin_top = 0.0
-margin_right = 245.0
+margin_right = 172.0
 margin_bottom = 32.0
 
 [node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 1 )]
 margin_top = 36.0
-margin_right = 245.0
+margin_right = 172.0
 margin_bottom = 68.0
 icon = ExtResource( 7 )
-next_scene_path = "res://src/Screens/MainScreen.tscn"
+next_scene_path = "res://srcPreState/Screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
 margin_top = 72.0
-margin_right = 245.0
+margin_right = 172.0
 margin_bottom = 104.0

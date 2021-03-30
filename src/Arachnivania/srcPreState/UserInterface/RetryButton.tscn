@@ -1,15 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://srcPreState/UserInterface/RetryButton.gd" type="Script" id=1]
-
-
-
+[ext_resource path="res://GodotAssets/MenuAssets/RetryButton.png" type="Texture" id=2]
 
 [node name="RetryButton" type="Button"]
-margin_right = 161.0
-margin_bottom = 26.0
+margin_left = -0.763855
+margin_top = 1.41052
+margin_right = 160.236
+margin_bottom = 27.4105
 size_flags_vertical = 3
-text = "Retry"
+icon = ExtResource( 2 )
+flat = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

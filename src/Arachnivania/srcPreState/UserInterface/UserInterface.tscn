@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://srcPreState/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://srcPreState/UserInterface/QuitButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://srcPreState/UserInterface/Title.tscn" type="PackedScene" id=3]
 [ext_resource path="res://srcPreState/UserInterface/RetryButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://srcPreState/UserInterface/UserInterface.gd" type="Script" id=5]
+[ext_resource path="res://GodotAssets/FontData/Pixellari/Pixellari.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://GodotAssets/MenuAssets/MainMenuButton.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
 
 [node name="UserInterface" type="Control"]
 pause_mode = 2
@@ -26,23 +34,27 @@ __meta__ = {
 }
 
 [node name="Health" type="Label" parent="PlayerData"]
-margin_right = 69.0
-margin_bottom = 14.0
+margin_right = 75.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
 text = "Health: %s"
 align = 1
 
 [node name="Experience" type="Label" parent="PlayerData"]
-margin_top = 18.0
-margin_right = 69.0
-margin_bottom = 32.0
+margin_top = 20.0
+margin_right = 75.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 2 )
 text = "XP: %s"
 align = 1
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.235294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title" parent="PauseOverlay" instance=ExtResource( 3 )]
 margin_top = -72.0
@@ -64,17 +76,19 @@ __meta__ = {
 }
 
 [node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 4 )]
-margin_right = 95.0
-margin_bottom = 24.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 245.0
+margin_bottom = 32.0
 
 [node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 1 )]
-margin_top = 28.0
-margin_right = 95.0
-margin_bottom = 52.0
-text = "Main Menu"
+margin_top = 36.0
+margin_right = 245.0
+margin_bottom = 68.0
+icon = ExtResource( 7 )
 next_scene_path = "res://src/Screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
-margin_top = 56.0
-margin_right = 95.0
-margin_bottom = 80.0
+margin_top = 72.0
+margin_right = 245.0
+margin_bottom = 104.0

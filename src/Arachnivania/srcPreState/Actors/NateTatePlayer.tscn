@@ -3,13 +3,6 @@
 [ext_resource path="res://GodotAssets/PlayerAssets/WidowerSprite.png" type="Texture" id=1]
 [ext_resource path="res://srcPreState/Actors/Player.gd" type="Script" id=2]
 
-
-
-
-
-
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.48507, 5.0867 )
 

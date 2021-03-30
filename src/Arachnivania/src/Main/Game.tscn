@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/Actors/Widower/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/Templates/RyanGTemplate0.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UI/debug/DebugPanel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/debug/DebugDock.gd" type="Script" id=4]
+[ext_resource path="res://GodotAssets/Theme/gdquest.theme" type="Theme" id=5]
 
 [node name="Game" type="Node"]
 
@@ -11,69 +12,72 @@
 layer = 100
 
 [node name="DebugDock" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 140.0
+margin_right = -287.0
 mouse_filter = 2
+theme = ExtResource( 5 )
+custom_constants/margin_right = 3
+custom_constants/margin_top = 3
+custom_constants/margin_left = 3
+custom_constants/margin_bottom = 3
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Column" type="VBoxContainer" parent="CanvasLayer/DebugDock"]
-margin_right = 140.0
-margin_bottom = 240.0
-mouse_filter = 2
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 110.0
+margin_bottom = 237.0
 
 [node name="DebugPanel" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.831373 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 140.0
-margin_bottom = 82.0
+margin_right = 107.0
+margin_bottom = 42.0
 reference_path = NodePath("../../../../Player/StateMachine/Move")
 properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
 
 [node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel" index="0"]
-margin_right = 133.0
-margin_bottom = 75.0
+margin_right = 107.0
+margin_bottom = 42.0
 
 [node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer" index="0"]
-margin_right = 126.0
-text = "Move"
+margin_right = 107.0
 
 [node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer" index="1"]
-margin_right = 126.0
-margin_bottom = 68.0
+margin_right = 107.0
+margin_bottom = 42.0
 
 [node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer/MarginContainer" index="0"]
-margin_right = 126.0
-margin_bottom = 50.0
+margin_right = 107.0
+margin_bottom = 22.0
 
 [node name="DebugPanel2" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.831373 )
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 86.0
-margin_right = 140.0
-margin_bottom = 132.0
+margin_top = 50.0
+margin_right = 107.0
+margin_bottom = 92.0
 reference_path = NodePath("../../../../Player/StateMachine")
 properties = PoolStringArray( "_state_name" )
 
 [node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2" index="0"]
-margin_right = 133.0
-margin_bottom = 39.0
+margin_right = 107.0
+margin_bottom = 42.0
 
 [node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer" index="0"]
-margin_right = 126.0
-text = "Move"
+margin_right = 107.0
 
 [node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer" index="1"]
-margin_right = 126.0
-margin_bottom = 32.0
+margin_right = 107.0
+margin_bottom = 42.0
 
 [node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer/MarginContainer" index="0"]
-margin_right = 126.0
-margin_bottom = 14.0
+margin_right = 107.0
+margin_bottom = 22.0
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1.52588e-05, -84.8301 )
@@ -83,7 +87,6 @@ position = Vector2( 112.827, 142.048 )
 
 [node name="CameraRig" parent="Player" index="0"]
 offset = Vector2( 150, 150 )
-mouse_range = Vector2( 100, 500 )
 
 [editable path="CanvasLayer/DebugDock/Column/DebugPanel"]
 

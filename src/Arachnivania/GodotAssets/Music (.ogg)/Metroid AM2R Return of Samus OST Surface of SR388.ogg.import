@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Metroid AM2R Return of Samus OST Surface of SR388.ogg-d9819fb9230f793dea056f896860f24c.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Metroid AM2R Return of Samus OST Surface of SR388.ogg"
+dest_files=[ "res://.import/Metroid AM2R Return of Samus OST Surface of SR388.ogg-d9819fb9230f793dea056f896860f24c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

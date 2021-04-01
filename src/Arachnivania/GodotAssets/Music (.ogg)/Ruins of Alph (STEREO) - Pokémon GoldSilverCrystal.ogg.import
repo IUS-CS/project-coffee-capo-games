@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ruins of Alph (STEREO) - Pokémon GoldSilverCrystal.ogg-0b8cb45bd23aade18ae99021f966d5ef.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Ruins of Alph (STEREO) - Pokémon GoldSilverCrystal.ogg"
+dest_files=[ "res://.import/Ruins of Alph (STEREO) - Pokémon GoldSilverCrystal.ogg-0b8cb45bd23aade18ae99021f966d5ef.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

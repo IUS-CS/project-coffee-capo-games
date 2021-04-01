@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Wrecked Ship - Super Metroid.ogg-3ac987a5e6c5fbe7e80d929a94cd09d9.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Wrecked Ship - Super Metroid.ogg"
+dest_files=[ "res://.import/Wrecked Ship - Super Metroid.ogg-3ac987a5e6c5fbe7e80d929a94cd09d9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

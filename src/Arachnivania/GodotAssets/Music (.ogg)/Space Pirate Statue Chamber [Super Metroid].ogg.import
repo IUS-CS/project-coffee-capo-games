@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Space Pirate Statue Chamber [Super Metroid].ogg-d4a98ead1986e423d65cf189c006291b.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Space Pirate Statue Chamber [Super Metroid].ogg"
+dest_files=[ "res://.import/Space Pirate Statue Chamber [Super Metroid].ogg-d4a98ead1986e423d65cf189c006291b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

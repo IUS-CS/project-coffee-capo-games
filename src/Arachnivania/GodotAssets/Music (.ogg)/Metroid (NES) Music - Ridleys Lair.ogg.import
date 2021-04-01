@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Metroid (NES) Music - Ridleys Lair.ogg-2e5d3d61df919e077f063b58d10b57c1.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Metroid (NES) Music - Ridleys Lair.ogg"
+dest_files=[ "res://.import/Metroid (NES) Music - Ridleys Lair.ogg-2e5d3d61df919e077f063b58d10b57c1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

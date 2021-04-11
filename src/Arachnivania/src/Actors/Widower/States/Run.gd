@@ -1,4 +1,10 @@
 extends State
+"""
+Horizontal movement on the ground.
+Delegates movement to its parent Move state and extends it
+with state transitions
+"""
+export var max_speed_sprint: = 243.0
 
 #Base interface function from state, delegates to Move
 func unhandled_input(event: InputEvent) -> void:
@@ -8,6 +14,11 @@ func unhandled_input(event: InputEvent) -> void:
 #Base interface function from state, defines Run and transitions
 func physics_process(delta: float) -> void:
 	var move: = get_parent()
+	#Set max_speed based on whether sprint is pressed or not
+	if Input.is_action_pressed("sprint"):
+		move.max_speed.x = max_speed_sprint
+	else:
+		move.max_speed.x = move.max_speed_default.x
 	#Transitions to other states based on direction and position
 	if owner.is_on_floor() and move.get_move_direction().x == 0.0:
 		_state_machine.transition_to("Move/Idle")

@@ -1,5 +1,9 @@
 extends State
-
+"""
+Vertical and Horizontal movement in the air.
+Delegates movement to its parent Move state and extends it
+with state transitions
+"""
 #Configurable properties
 export var acceleration_x: = 2500.0
 

@@ -27,7 +27,7 @@ func _ready() -> void:
 
 #Draw the canvas item on ready
 func _draw() -> void:
-	draw_circle(Vector2.ZERO, 12.0, color)
+	draw_circle(Vector2.ZERO, 5.0, color)
 
 #Reactivate after CD timer
 func _on_Timer_timeout() -> void:

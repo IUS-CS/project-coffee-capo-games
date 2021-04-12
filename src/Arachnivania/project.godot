@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://srcPreState/Actors/Actor.gd"
 }, {
+"base": "Position2D",
+"class": "Hook",
+"language": "GDScript",
+"path": "res://src/Actors/Widower/Hook/Hook.gd"
+}, {
 "base": "Area2D",
 "class": "HookTarget",
 "language": "GDScript",
@@ -36,6 +41,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Actor": "",
+"Hook": "res://GodotAssets/Icons/icon_hook.svg",
 "HookTarget": "",
 "Player": "",
 "State": "res://GodotAssets/Icons/state.svg",

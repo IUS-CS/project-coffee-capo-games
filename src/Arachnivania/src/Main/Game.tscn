@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Actors/Widower/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/Templates/RyanGTemplate0.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UI/debug/DebugPanel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UI/debug/DebugDock.gd" type="Script" id=4]
 [ext_resource path="res://GodotAssets/Theme/gdquest.theme" type="Theme" id=5]
+[ext_resource path="res://src/Objects/HookTarget.tscn" type="PackedScene" id=6]
 
 [node name="Game" type="Node"]
 
@@ -86,6 +87,42 @@ margin_right = 93.0
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1.52588e-05, -84.8301 )
+
+[node name="HookTarget" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 223.37, 170.83 )
+
+[node name="HookTarget4" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 312.606, 203.763 )
+
+[node name="HookTarget5" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 379.392, 51.8491 )
+
+[node name="HookTarget6" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 736.481, 0 )
+
+[node name="HookTarget7" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 594.353, 0 )
+
+[node name="HookTarget8" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 667.892, -87.6813 )
+
+[node name="HookTarget9" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 490.408, -87.6813 )
+
+[node name="HookTarget10" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 312.606, -87.6813 )
+
+[node name="HookTarget11" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 133.987, -87.6813 )
+
+[node name="HookTarget12" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 133.987, -87.6813 )
+
+[node name="HookTarget2" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 223.37, 51.8491 )
+
+[node name="HookTarget3" parent="Level" instance=ExtResource( 6 )]
+position = Vector2( 312.606, 108.83 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 112.827, 142.048 )

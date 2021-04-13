@@ -14,7 +14,6 @@ __meta__ = {
 }
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-visible = false
 cast_to = Vector2( 40, 0 )
 
 [node name="Arrow" parent="." instance=ExtResource( 6 )]

@@ -45,10 +45,7 @@ Here are screenshots of what we did:
   
 Points | Story
 -------|--------
-3| As a administrator, I want to implement a sprint and double jump
-3| As a administrator, I want to implement a hooking element
-4| As a administrator, I want to have testing that covers the game
-8| As an administrator, I want my game to be cohesive start to finish
-4| As an administrator, I want to be able to build my game and start from desktop
+4| As a administrator, I want to implement a sprint and double jump
+8| As a administrator, I want to implement a hooking element
 6| As an administrator, I want to complete a projectreflections.md that has input from every group memeber
-6| As an administrator, I want to have complete documentation on the game
+10| As an administrator, I want to have complete documentation on the game

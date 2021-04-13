@@ -11,6 +11,7 @@
 script = ExtResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+cast_to = Vector2( 40, 0 )
 
 [node name="Arrow" parent="." instance=ExtResource( 6 )]
 
@@ -20,6 +21,7 @@ script = ExtResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 3 )
+initial_state = NodePath("Aim")
 
 [node name="Aim" type="Node" parent="StateMachine"]
 script = ExtResource( 2 )

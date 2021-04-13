@@ -8,7 +8,7 @@
 [ext_resource path="res://src/Actors/Widower/States/Air.gd" type="Script" id=6]
 [ext_resource path="res://src/Actors/Widower/Player.gd" type="Script" id=7]
 [ext_resource path="res://src/Actors/Widower/Camera/CameraRig.tscn" type="PackedScene" id=8]
-[ext_resource path="res://src/Actors/Widower/Hook/Arrow.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Widower/Hook/Hook.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 4 )
@@ -50,6 +50,12 @@ script = ExtResource( 7 )
 
 [node name="CameraRig" parent="." instance=ExtResource( 8 )]
 
+[node name="Hook" parent="." instance=ExtResource( 9 )]
+position = Vector2( 0, -7 )
+
+[node name="RayCast2D" parent="Hook" index="0"]
+cast_to = Vector2( 60, 0 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -4 )
 shape = SubResource( 1 )
@@ -81,5 +87,4 @@ texture = ExtResource( 1 )
 hframes = 24
 frame = 22
 
-[node name="Arrow" parent="." instance=ExtResource( 9 )]
-position = Vector2( 14, -5 )
+[editable path="Hook"]

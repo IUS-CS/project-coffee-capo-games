@@ -12,9 +12,10 @@ onready var start_length: float = head.position.x
 var hook_position: = Vector2.ZERO setget set_hook_position
 var length: = 4.0 setget set_length
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("hook"):
-		self.hook_position = get_global_mouse_position()
+#Testing the hook
+#func _unhandled_input(event: InputEvent) -> void:
+#	if event.is_action_pressed("hook"):
+#		self.hook_position = get_global_mouse_position()
 
 #Setter functions for hook_position and length
 func set_hook_position(value: Vector2) -> void:
@@ -32,6 +33,6 @@ func set_length(value: float) -> void:
 	length = value
 	#index -1 accesses the last member in the array
 	tail.points[-1].x = length
-	head.position.x = tail.points[-1].x
+	head.position.x = tail.points[-1].x + tail.position.x
 
 

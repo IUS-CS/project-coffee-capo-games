@@ -53,9 +53,6 @@ script = ExtResource( 7 )
 [node name="Hook" parent="." instance=ExtResource( 9 )]
 position = Vector2( 0, -7 )
 
-[node name="RayCast2D" parent="Hook" index="0"]
-cast_to = Vector2( 60, 0 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -4 )
 shape = SubResource( 1 )
@@ -86,5 +83,3 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 1 )
 hframes = 24
 frame = 22
-
-[editable path="Hook"]

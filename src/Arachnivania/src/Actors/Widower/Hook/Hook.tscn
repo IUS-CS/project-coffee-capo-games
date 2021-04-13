@@ -9,8 +9,12 @@
 
 [node name="Hook" type="Position2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 25.7383, 25.5064 ]
+}
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 cast_to = Vector2( 40, 0 )
 
 [node name="Arrow" parent="." instance=ExtResource( 6 )]

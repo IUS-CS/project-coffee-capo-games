@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/Actors/Widower/Hook/SnapDetector.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Widower/Hook/HookingHint.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 17.5714
+height = 24.039
 
 [node name="SnapDetector" type="Area2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -9.93569 ],
+"_edit_vertical_guides_": [ 5.03946, 20.0206, 10.0012, 25.5119, 45.5536 ]
+}
+
+[node name="HookingHint" type="Position2D" parent="."]
+script = ExtResource( 2 )
+color = Color( 0.290196, 0.290196, 1, 1 )
+
+[node name="CapsuleV" type="CollisionShape2D" parent="."]
+position = Vector2( 43.4346, 0 )
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 10.0012, 0 )
+cast_to = Vector2( 8, 0 )

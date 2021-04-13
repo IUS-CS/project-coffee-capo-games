@@ -23,5 +23,5 @@ position = Vector2( 43.4346, 0 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 10.0012, 0 )
 cast_to = Vector2( 8, 0 )
+collision_mask = 8

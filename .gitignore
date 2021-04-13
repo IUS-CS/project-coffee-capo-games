@@ -7,6 +7,7 @@
 .import/
 export.cfg
 export_presets.cfg
+*[Ll]ogs/*
 
 # Imported translations (automatically generated from CSV files)
 *.translation

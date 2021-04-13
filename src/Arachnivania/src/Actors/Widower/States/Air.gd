@@ -1,11 +1,23 @@
 extends State
-
+"""
+Manages Air movement, including jumping and landing.
+You can pass a msg to this state, every key is optional:
+{
+	velocity: Vector2, to preseve inertia from the previos state
+	impulse: float, to make the character jump
+}
+"""
 #Configurable properties
 export var acceleration_x: = 2500.0
+export var jump_impulse: = 450.0
+export var max_jump_count:= 2
+var _jump_count: = 0
 
 #Base interface function from state, delegates to Move
 func unhandled_input(event: InputEvent) -> void:
 	var move: = get_parent()
+	if event.is_action_pressed("jump") and _jump_count < max_jump_count:
+		jump()
 	move.unhandled_input(event)
 
 #Base interface function from state, defines Air and transitions
@@ -30,15 +42,24 @@ func enter(msg: Dictionary = {}) -> void:
 		move.max_speed.x = max(abs(msg.velocity.x), move.max_speed_default.x)
 	#Ability to jump, using other states to tell Air the player needs to jump
 	if "impulse" in msg:
-		move.velocity += calculate_jump_velocity(msg.impulse)
+		jump()
 
 #Base interface function from state to delegate to the parent state Move
 func exit() -> void:
 	var move: = get_parent()
-	move.exit()
 	#Resets acceleration to default on exiting move state
 	move.acceleration = move.acceleration_default
+	#Reset _jump_count
+	_jump_count = 0
+	move.exit()
 
+#Handles jump velocity and double jump
+func jump() -> void:
+	var move: = get_parent()
+	move.velocity += calculate_jump_velocity(jump_impulse)
+	_jump_count += 1
+
+#Returns a new velocity with a vertical impulse added it it
 func calculate_jump_velocity(impulse: = 0.0) -> Vector2:
 	var move: = get_parent()
 	return move.calculate_velocity(

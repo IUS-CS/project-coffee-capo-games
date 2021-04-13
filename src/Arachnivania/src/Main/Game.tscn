@@ -132,7 +132,6 @@ offset = Vector2( 150, 150 )
 
 [node name="Move" parent="Player/StateMachine" index="0"]
 acceleration_default = Vector2( 5000, 500 )
-jump_impulse = 190.0
 
 [editable path="CanvasLayer/DebugDock/Column/DebugPanel"]
 

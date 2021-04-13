@@ -11,6 +11,7 @@ __meta__ = {
 }
 
 [node name="Tail" type="Line2D" parent="."]
+position = Vector2( 5, 0 )
 points = PoolVector2Array( 4, 0, 9, 0 )
 width = 1.0
 default_color = Color( 0.101961, 0.188235, 0.235294, 1 )
@@ -18,7 +19,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Head" type="Sprite" parent="."]
-position = Vector2( 9, 1.11061e-06 )
+position = Vector2( 14, 9.53674e-07 )
 rotation = 1.57079
 scale = Vector2( 0.0561004, 0.0561005 )
 texture = ExtResource( 2 )

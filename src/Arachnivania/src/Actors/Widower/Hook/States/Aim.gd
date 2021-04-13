@@ -8,7 +8,7 @@ detect points the player will hook onto.
 #Transtion to fire state when hooking happens
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("hook") and owner.can_hook():
-		_state_machine.transition.to("Aim/Fire")
+		_state_machine.transition_to("Aim/Fire")
 
 #Base State Interface
 #Creates a vector for ray cast and direction

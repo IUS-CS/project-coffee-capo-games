@@ -16,6 +16,15 @@ var acceleration: = acceleration_default
 var max_speed: = max_speed_default
 var velocity: = Vector2.ZERO
 
+#Signal call back transition to the hook state, does not allow hook if target is  
+#below player while on the ground
+func _on_Hook_hooked_onto_target(target_global_position: Vector2) -> void:
+	var to_target: Vector2 = target_global_position - owner.global_position
+	if owner.is_on_floor() and to_target.y > 0.0:
+		return
+	_state_machine.transition_to("Hook", {target_global_position = target_global_position,
+	velocity = velocity})
+
 #adding a transition to the air state when input is detected
 func unhandled_input(event: InputEvent) -> void:
 	if owner.is_on_floor() and event.is_action_pressed("jump"):
@@ -30,6 +39,15 @@ func physics_process(delta: float) -> void:
 	velocity = owner.move_and_slide(velocity, owner.FLOOR_NORMAL)
 	#signal for the CameraRig
 	Events.emit_signal("player_moved", owner)
+
+#Enter function from hook state
+func enter(msg: Dictionary = {}) -> void:
+	owner.hook.connect("hooked_onto_target", self, "_on_Hook_hooked_onto_target")
+	
+
+#Exit function to hook state
+func exit() -> void:
+	owner.hook.disconnect("hooked_onto_target", self, "_on_Hook_hooked_onto_target")
 
 #static functions are for calulations and do not have access to other members of the class
 static func calculate_velocity(

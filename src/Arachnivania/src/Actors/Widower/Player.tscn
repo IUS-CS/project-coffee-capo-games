@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://GodotAssets/PlayerAssets/WidowerSprite.png" type="Texture" id=1]
 [ext_resource path="res://src/Main/StateMachine/StateMachine.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/Actors/Widower/Player.gd" type="Script" id=7]
 [ext_resource path="res://src/Actors/Widower/Camera/CameraRig.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Actors/Widower/Hook/Hook.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Widower/States/Hook.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 4 )
@@ -76,6 +77,9 @@ script = ExtResource( 5 )
 
 [node name="Air" type="Node" parent="StateMachine/Move"]
 script = ExtResource( 6 )
+
+[node name="Hook" type="Node" parent="StateMachine"]
+script = ExtResource( 10 )
 
 [node name="Widower" type="Sprite" parent="."]
 position = Vector2( 4.35978, -11.1156 )

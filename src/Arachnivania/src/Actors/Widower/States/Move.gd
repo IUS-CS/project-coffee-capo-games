@@ -43,7 +43,6 @@ func physics_process(delta: float) -> void:
 #Enter function from hook state
 func enter(msg: Dictionary = {}) -> void:
 	owner.hook.connect("hooked_onto_target", self, "_on_Hook_hooked_onto_target")
-	
 
 #Exit function to hook state
 func exit() -> void:

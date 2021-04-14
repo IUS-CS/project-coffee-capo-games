@@ -58,6 +58,7 @@ config/icon="res://GodotAssets/PlayerAssets/widower.png"
 
 PlayerData="*res://srcPreState/Autoload/PlayerData.tscn"
 Events="*res://src/Autoload/Events.gd"
+Steering="*res://src/Autoload/Steering.gd"
 
 [display]
 

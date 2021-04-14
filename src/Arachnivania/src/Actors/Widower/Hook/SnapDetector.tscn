@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Actors/Widower/Hook/HookingHint.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 17.5714
+radius = 47.0783
 height = 24.039
 
 [node name="SnapDetector" type="Area2D"]
@@ -19,7 +19,8 @@ script = ExtResource( 2 )
 color = Color( 0.290196, 0.290196, 1, 1 )
 
 [node name="CapsuleV" type="CollisionShape2D" parent="."]
-position = Vector2( 43.4346, 0 )
+modulate = Color( 0.101961, 0.0666667, 0.729412, 1 )
+position = Vector2( 67.0144, 0 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

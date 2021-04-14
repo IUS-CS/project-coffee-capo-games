@@ -62,12 +62,38 @@ size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_constants/separation = 2
 
-[node name="DebugPanel2" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+[node name="DebugPanel3" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 62.0
 margin_right = 107.0
 margin_bottom = 104.0
+size_flags_vertical = 5
+reference_path = NodePath("../../../../Player/Hook/StateMachine")
+properties = PoolStringArray( "_state_name" )
+
+[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel3" index="0"]
+margin_right = 100.0
+
+[node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel3/VBoxContainer" index="0"]
+margin_right = 93.0
+text = "StateMachine"
+
+[node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel3/VBoxContainer" index="1"]
+margin_right = 93.0
+
+[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel3/VBoxContainer/MarginContainer" index="0"]
+margin_right = 93.0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="DebugPanel2" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 104.0
+margin_right = 107.0
+margin_bottom = 146.0
 size_flags_vertical = 5
 reference_path = NodePath("../../../../Player/StateMachine")
 properties = PoolStringArray( "_state_name" )
@@ -135,6 +161,10 @@ acceleration_default = Vector2( 5000, 500 )
 
 [editable path="CanvasLayer/DebugDock/Column/DebugPanel"]
 
+[editable path="CanvasLayer/DebugDock/Column/DebugPanel3"]
+
 [editable path="CanvasLayer/DebugDock/Column/DebugPanel2"]
 
 [editable path="Player"]
+
+[editable path="Player/Hook"]

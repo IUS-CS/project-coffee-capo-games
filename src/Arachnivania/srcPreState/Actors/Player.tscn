@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GodotAssets/PlayerAssets/WidowerSprite.png" type="Texture" id=1]
 [ext_resource path="res://srcPreState/Actors/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Widower/Camera/CameraRig.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.48507, 5.0867 )
@@ -44,6 +45,8 @@ extents = Vector2( 5.05621, 5.76154 )
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2147483656
 script = ExtResource( 2 )
+
+[node name="CameraRig" parent="." instance=ExtResource( 3 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.3, 0.3 )

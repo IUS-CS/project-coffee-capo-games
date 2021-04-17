@@ -1,0 +1,283 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Actors/Widower/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GodotAssets/Tilesets/House Assets 2.jpg" type="Texture" id=2]
+[ext_resource path="res://src/UI/debug/DebugPanel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UI/debug/DebugDock.gd" type="Script" id=4]
+[ext_resource path="res://GodotAssets/Theme/gdquest.theme" type="Theme" id=5]
+[ext_resource path="res://src/Objects/Exit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GodotAssets/Music (.ogg)/Space Pirate Statue Chamber [Super Metroid].ogg" type="AudioStream" id=7]
+[ext_resource path="res://GodotAssets/Tilesets/House Assets 3.jpg" type="Texture" id=8]
+[ext_resource path="res://GodotAssets/BgAssets/Dead Great Spider.jpg" type="Texture" id=9]
+[ext_resource path="res://GodotAssets/BgAssets/Chimney Background.jpg" type="Texture" id=10]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 256, 0, 256, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 23, 0, 23, 210, 0, 210 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 23, 0, 23, 25, 0, 25 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 83, 0, 83, 69, 0, 69 )
+
+[sub_resource type="TileSet" id=5]
+0/name = "House Assets 3.jpg 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 512, 256, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "House Assets 3.jpg 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 352, 256, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "House Assets 3.jpg 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 800, 96, 64, 96 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "House Assets 3.jpg 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 873, 304, 105, 107 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "House Assets 2.jpg 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 1, 71, 23, 210 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 2 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "House Assets 2.jpg 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 1, 281, 23, 25 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 3 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Dead Great Spider.jpg 6"
+6/texture = ExtResource( 9 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( -2, -1, 83, 69 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 4 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+
+[node name="Game" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 2.2063
+margin_top = -168.413
+margin_right = 427.206
+margin_bottom = 540.587
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="DebugDock" type="MarginContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -287.0
+mouse_filter = 2
+theme = ExtResource( 5 )
+custom_constants/margin_right = 3
+custom_constants/margin_top = 3
+custom_constants/margin_left = 3
+custom_constants/margin_bottom = 3
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Column" type="VBoxContainer" parent="CanvasLayer/DebugDock"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 110.0
+margin_bottom = 237.0
+custom_constants/separation = 0
+
+[node name="DebugPanel" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 107.0
+margin_bottom = 62.0
+size_flags_vertical = 5
+reference_path = NodePath("../../../../Player/StateMachine/Move")
+properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
+
+[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel" index="0"]
+margin_right = 100.0
+margin_bottom = 55.0
+
+[node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer" index="0"]
+margin_right = 93.0
+text = "Move"
+
+[node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer" index="1"]
+margin_right = 93.0
+margin_bottom = 48.0
+
+[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer/MarginContainer" index="0"]
+margin_right = 93.0
+margin_bottom = 31.0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+custom_constants/separation = 2
+
+[node name="DebugPanel2" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 62.0
+margin_right = 107.0
+margin_bottom = 104.0
+size_flags_vertical = 5
+reference_path = NodePath("../../../../Player/StateMachine")
+properties = PoolStringArray( "_state_name" )
+
+[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2" index="0"]
+margin_right = 100.0
+
+[node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer" index="0"]
+margin_right = 93.0
+text = "StateMachine"
+
+[node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer" index="1"]
+margin_right = 93.0
+
+[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer/MarginContainer" index="0"]
+margin_right = 93.0
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 15
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 65535, 4, 0, 26, 4, 0, 131118, 0, 0, 917503, 5, 0, 851994, 5, 0, 983039, 5, 0, 917530, 5, 0, 1048575, 5, 0, 983066, 5, 0, 1114111, 5, 0, 1048602, 5, 0, 1179647, 5, 0, 1114138, 5, 0, 1245183, 5, 0, 1179674, 5, 0, 1310719, 5, 0, 1245210, 5, 0, 1376255, 5, 0, 1310746, 5, 0, 1441791, 5, 0, 1376282, 5, 0, 1507327, 5, 0, 1441818, 5, 0, 1572863, 5, 0, 1507354, 5, 0, 1638399, 5, 0, 1572890, 5, 0, 1703935, 5, 0, 1638400, 5, 0, 1638401, 5, 0, 1638426, 5, 0, 1769471, 5, 0, 1703937, 5, 0, 1703938, 5, 0, 1703939, 5, 0, 1703940, 5, 0, 1703952, 6, 0, 1703962, 5, 0, 1835007, 5, 0, 1769476, 5, 0, 1769477, 5, 0, 1769478, 5, 0, 1769498, 5, 0, 1900543, 5, 0, 1835015, 5, 0, 1835016, 5, 0, 1835017, 5, 0, 1835018, 5, 0, 1835032, 5, 0, 1835033, 5, 0, 1835034, 5, 0, 1966079, 5, 0, 1900554, 5, 0, 1900555, 5, 0, 1900556, 5, 0, 1900557, 5, 0, 1900558, 5, 0, 1900559, 5, 0, 1900564, 5, 0, 1900567, 5, 0, 1900568, 5, 0, 1900570, 5, 0, 1966099, 5, 0, 1966101, 5, 0, 1966102, 5, 0, 1966103, 5, 0, 1966106, 5, 0, 2031634, 5, 0, 2031635, 5, 0, 2031642, 5, 0, 2097169, 5, 0, 2097170, 5, 0, 2097178, 5, 0, 2162688, 5, 0, 2162689, 5, 0, 2162690, 5, 0, 2162691, 5, 0, 2162692, 5, 0, 2162693, 5, 0, 2162694, 5, 0, 2162695, 5, 0, 2162696, 5, 0, 2162697, 5, 0, 2162698, 5, 0, 2162699, 5, 0, 2162700, 5, 0, 2162701, 5, 0, 2162702, 5, 0, 2162703, 5, 0, 2162704, 5, 0, 2162705, 5, 0, 2162706, 5, 0, 2162707, 5, 0, 2162708, 5, 0, 2162709, 5, 0, 2162710, 5, 0, 2162711, 5, 0, 2162712, 5, 0, 2162713, 5, 0, 2162714, 5, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40.849, 508.881 )
+script = null
+
+[node name="CameraRig" parent="Player" index="0"]
+offset = Vector2( 150, 150 )
+
+[node name="CollisionShape2D" parent="Player" index="1"]
+position = Vector2( 0.260223, 0.149994 )
+
+[node name="Move" parent="Player/StateMachine" index="0"]
+acceleration_default = Vector2( 5000, 500 )
+jump_impulse = 190.0
+
+[node name="Widower" parent="Player" index="4"]
+position = Vector2( 0.105103, -0.105103 )
+
+[node name="Portal2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1.71771, 509.372 )
+script = null
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -19.314
+autoplay = true
+
+[editable path="CanvasLayer/DebugDock/Column/DebugPanel"]
+
+[editable path="CanvasLayer/DebugDock/Column/DebugPanel2"]
+
+[editable path="Player"]

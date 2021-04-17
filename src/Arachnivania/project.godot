@@ -46,6 +46,7 @@ config/icon="res://GodotAssets/PlayerAssets/widower.png"
 
 PlayerData="*res://srcPreState/Autoload/PlayerData.tscn"
 Events="*res://src/Autoload/Events.gd"
+Global="*res://Global.gd"
 
 [display]
 

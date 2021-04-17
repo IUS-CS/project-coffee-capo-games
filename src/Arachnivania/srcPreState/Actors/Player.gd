@@ -54,6 +54,10 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 func die() -> void:
 	queue_free()
 
+func _ready():
+	self.global_position = Global.player_initial_map_position
+	set_blend_position(Global.player_facing_direction)
+
 ##For RyanS test levels
 #func _on_Fallzone_body_entered(body):
 #	get_tree().change_scene("res://srcPreState/Levels/RyanSCave.tscn")

@@ -17,7 +17,8 @@
 [ext_resource path="res://GodotAssets/BgAssets/bg_stars.png" type="Texture" id=15]
 [ext_resource path="res://srcPreState/Objects/HealthOrb.tscn" type="PackedScene" id=16]
 [ext_resource path="res://srcPreState/Objects/Portal2D.tscn" type="PackedScene" id=17]
-[ext_resource path="res://srcPreState/UserInterface/UserInterface.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=18]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

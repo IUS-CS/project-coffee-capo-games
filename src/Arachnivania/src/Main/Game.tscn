@@ -34,82 +34,43 @@ margin_right = 110.0
 margin_bottom = 237.0
 custom_constants/separation = 0
 
-[node name="DebugPanel" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+[node name="MoveState" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 107.0
-margin_bottom = 62.0
-size_flags_vertical = 5
-reference_path = NodePath("../../../../Player/StateMachine/Move")
-properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
-
-[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel" index="0"]
-margin_right = 100.0
-margin_bottom = 55.0
-
-[node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer" index="0"]
-margin_right = 93.0
-text = "Move"
-
-[node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer" index="1"]
-margin_right = 93.0
-margin_bottom = 48.0
-
-[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel/VBoxContainer/MarginContainer" index="0"]
-margin_right = 93.0
-margin_bottom = 31.0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_constants/separation = 2
-
-[node name="DebugPanel3" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 62.0
-margin_right = 107.0
-margin_bottom = 104.0
-size_flags_vertical = 5
-reference_path = NodePath("../../../../Player/Hook/StateMachine")
-properties = PoolStringArray( "_state_name" )
-
-[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel3" index="0"]
-margin_right = 100.0
-
-[node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel3/VBoxContainer" index="0"]
-margin_right = 93.0
-text = "StateMachine"
-
-[node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel3/VBoxContainer" index="1"]
-margin_right = 93.0
-
-[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel3/VBoxContainer/MarginContainer" index="0"]
-margin_right = 93.0
-size_flags_horizontal = 1
-size_flags_vertical = 0
-custom_constants/separation = 2
-
-[node name="DebugPanel2" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 104.0
-margin_right = 107.0
-margin_bottom = 146.0
+margin_bottom = 42.0
 size_flags_vertical = 5
 reference_path = NodePath("../../../../Player/StateMachine")
 properties = PoolStringArray( "_state_name" )
 
-[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2" index="0"]
-margin_right = 100.0
+[node name="HookState" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 42.0
+margin_right = 107.0
+margin_bottom = 84.0
+size_flags_vertical = 5
+reference_path = NodePath("../../../../Player/Hook/StateMachine")
+properties = PoolStringArray( "_state_name" )
 
-[node name="Reference" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer" index="0"]
-margin_right = 93.0
-text = "StateMachine"
+[node name="Move" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 84.0
+margin_right = 107.0
+margin_bottom = 146.0
+size_flags_vertical = 5
+reference_path = NodePath("../../../../Player/StateMachine/Move")
+properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
 
-[node name="MarginContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer" index="1"]
-margin_right = 93.0
-
-[node name="VBoxContainer" parent="CanvasLayer/DebugDock/Column/DebugPanel2/VBoxContainer/MarginContainer" index="0"]
-margin_right = 93.0
+[node name="Hook" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 146.0
+margin_right = 107.0
+margin_bottom = 180.0
+reference_path = NodePath("../../../../Player/StateMachine/Hook")
+properties = PoolStringArray( "target_global_position", "velocity" )
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1.52588e-05, -84.8301 )
@@ -158,12 +119,6 @@ offset = Vector2( 150, 150 )
 
 [node name="Move" parent="Player/StateMachine" index="0"]
 acceleration_default = Vector2( 5000, 500 )
-
-[editable path="CanvasLayer/DebugDock/Column/DebugPanel"]
-
-[editable path="CanvasLayer/DebugDock/Column/DebugPanel3"]
-
-[editable path="CanvasLayer/DebugDock/Column/DebugPanel2"]
 
 [editable path="Player"]
 

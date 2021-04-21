@@ -58,7 +58,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 84.0
 margin_right = 107.0
-margin_bottom = 146.0
+margin_bottom = 142.0
 size_flags_vertical = 5
 reference_path = NodePath("../../../../Player/StateMachine/Move")
 properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
@@ -66,9 +66,9 @@ properties = PoolStringArray( "velocity", "max_speed", "acceleration" )
 [node name="Hook" parent="CanvasLayer/DebugDock/Column" instance=ExtResource( 3 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 146.0
+margin_top = 142.0
 margin_right = 107.0
-margin_bottom = 180.0
+margin_bottom = 192.0
 reference_path = NodePath("../../../../Player/StateMachine/Hook")
 properties = PoolStringArray( "target_global_position", "velocity" )
 

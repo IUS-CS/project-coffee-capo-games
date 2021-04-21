@@ -1,17 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-<<<<<<< HEAD:src/Arachnivania/srcPreState/Screens/MainScreen.tscn
 [ext_resource path="res://srcPreState/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://srcPreState/UserInterface/Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://srcPreState/UserInterface/QuitButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GodotAssets/Music (.ogg)/Metroid (NES) Music - Title Theme.ogg" type="AudioStream" id=4]
-=======
-[ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=3]
->>>>>>> main:src/Arachnivania/srcPreState/Screens/MainScreenOLD.tscn
 [ext_resource path="res://GodotAssets/FontData/Pixellari/Pixellari.ttf" type="DynamicFontData" id=6]
-
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
@@ -65,7 +58,7 @@ __meta__ = {
 [node name="PlayButton" parent="Menu" instance=ExtResource( 1 )]
 margin_right = 172.0
 margin_bottom = 32.0
-next_scene_path = "res://srcPreState/Levels/RyanGTest.tscn"
+next_scene_path = "res://src/Main/Cave.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 3 )]
 margin_top = 36.0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Metroid (NES) Music - Title Theme.ogg-21dc353c214fe49aa0f09d31e7963eb6.oggstr"
+
+[deps]
+
+source_file="res://GodotAssets/Music (.ogg)/Metroid (NES) Music - Title Theme.ogg"
+dest_files=[ "res://.import/Metroid (NES) Music - Title Theme.ogg-21dc353c214fe49aa0f09d31e7963eb6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

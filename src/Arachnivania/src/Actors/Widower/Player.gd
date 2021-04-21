@@ -5,6 +5,8 @@ class_name Player
 onready var state_machine: StateMachine = $StateMachine
 onready var collider: CollisionShape2D = $CollisionShape2D
 onready var hook: Hook = $Hook
+onready var sprite: Sprite = $Widower
+onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 
 const FLOOR_NORMAL: = Vector2.UP
 

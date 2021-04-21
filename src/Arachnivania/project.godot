@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Arachnivania"
-run/main_scene="res://src/Screens/MainScreen.tscn"
+run/main_scene="res://src/Main/MainScreenFinal.tscn"
 config/icon="res://GodotAssets/PlayerAssets/widower.png"
 
 [autoload]

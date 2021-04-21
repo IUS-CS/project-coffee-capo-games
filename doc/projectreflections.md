@@ -8,3 +8,17 @@ My main role for the Arachnivania project was pixel artist. Since this was defin
 My main role was the programmer for the game physics and mechanics. Most of my time was spent learning about the complexities of the Godot engine. The first few sprints was dedicated to the basic set up of Scene Trees and Nodes. Starting with the basic move mechanics of the player and the enemy. From there I learned about collision boxes and signals, that allowed for the player and enemy detect each other and react to certain signals, such as a stomp or hit. I also included code for health objects and level transition portals. From there I implemented the State Machine design. Unfortunatly this required me to refactor all of my code. This ate up alot of time without actually moving forward with the project. In fact, I was not able to refactor everything, and could only get the player character implemented with the state design. From there I implemented the debuggin panel and the hook ability. Along the way I was very active on GitHub, managing the project board and issues. I also got alot of experience in Vim writing commit messages. 
 
 ## Ryan Scott
+
+My main role was the level designer (Intailing):
+	- Building levels around the player's mobility
+	- Design and construct interconnected game world
+	- Created atmosphere for each level
+Nity Grity (Maps):
+	- find tilesets (or pixel art to use as tiles
+	- Find backgrounds, layer them behind tile map
+	- convert all music to .ogg files (mp3 won't work)
+	- manually create and set collision settings for all tiles
+	- Communicate with Ryan G. any control ideas for issues
+	- Communicate with Nathan any pixel art ideas
+
+	

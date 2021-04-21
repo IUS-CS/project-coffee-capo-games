@@ -1,12 +1,13 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://srcPreState/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
-[ext_resource path="res://srcPreState/UserInterface/QuitButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://srcPreState/UserInterface/Title.tscn" type="PackedScene" id=3]
-[ext_resource path="res://srcPreState/UserInterface/RetryButton.tscn" type="PackedScene" id=4]
-[ext_resource path="res://srcPreState/UserInterface/UserInterface.gd" type="Script" id=5]
+[ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/UserInterface/RetryButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/UserInterface/UserInterface.gd" type="Script" id=5]
 [ext_resource path="res://GodotAssets/FontData/Pixellari/Pixellari.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://GodotAssets/MenuAssets/MainMenuButton.png" type="Texture" id=7]
+
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )

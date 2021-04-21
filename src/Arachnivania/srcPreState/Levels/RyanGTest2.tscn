@@ -7,10 +7,15 @@
 [ext_resource path="res://GodotAssets/BgAssets/black_bg.png" type="Texture" id=5]
 [ext_resource path="res://srcPreState/Actors/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://srcPreState/Actors/Enemy2.tscn" type="PackedScene" id=7]
+<<<<<<< HEAD
 [ext_resource path="res://srcPreState/UserInterface/UserInterface.tscn" type="PackedScene" id=8]
 [ext_resource path="res://GodotAssets/Tilesets/Beehive.jpg" type="Texture" id=9]
 [ext_resource path="res://srcPreState/Actors/Boss.tscn" type="PackedScene" id=10]
 [ext_resource path="res://GodotAssets/Music (.ogg)/Metroid (NES) Music - Ridleys Lair.ogg" type="AudioStream" id=11]
+=======
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=8]
+
+>>>>>>> main
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )

@@ -1,128 +1,55 @@
-# Unit Testing
+# Manual Unit Testing
 
-We will be using the GUT library plugin to do unit testing on the Arachnivania source code. The asserts and method library documentation can be found at https://github.com/bitwes/Gut/wiki/Asserts-and-Methods
+Using the GUT library plugin for unit testing proved to be to difficult, as it was need to understand Godot, and what goes on under the hood, on a scall that was not suitable for us. Situations to test needed to be simulated in code using the multitude of build in Godot functions, and functions provided in the GUT library. GUT also was more focused on testing .gd files, instead of actual scene trees. The way that the State Machine was coded, was to refrence Node Paths, not Script Paths.
 
-With this we will be able to simulate many different aspect of player input, character states, character movement and character position. We can then assert whether the intended output of code matches the simulated output. This will be easy to implement and monitor due to the previous implementation of the debug panel that is a UI panel displaying customizable properties including the current state of the State Machine.
+## Solution and Summary
 
-## Example
+It was decided the best corse of testing would be manually, using a debug panel that was added earlier in development. The purpose of this panel is to track, in real time, what state the player is in and any number of properties. The panel itself is modular and independant, meaning multiple instances of the panel can be added to the scene and track any Node in the scene. That panel can then track any multitude of properties. These can be already existing properties, or if there was specific propery within a function of that node, I could just add it outside the function as its own variable and then add that to the debug panel. I can do this in real time, even as I am demoing, so there is no need to close the demo and re-open, saving time.
 
-Here is a very early example of using GUT to test prelimenary movement code on our character
+## Method
+
+![testing](images/Inked2021.04.20-17.24_LI.jpg)
+
+This is the Debug Panel scene. This scene can be added to any scene and you can set the `Reference Path` to any node within that scene tree. In `Properties`, you can then set the number of variables you would like to track, and then put in the variable as it is named in the script
+
+![testing](images/Inked2021.04.20-17.39_LI.jpg)
+
+This is an example of what it may look like after it is added to the desired scene, here you can see the node in the scene tree, its visual representation on the screen and its configurable properties and where to set it up. 
+
+## Results
+
+This method of testing does not conform with Test Driven Development, as there is no way to set up the debug panel without actually developing the product. However, it is a quick and scalable method of testing for beginniners of game development within Godot.
+
+![testing](images/2021.04.20-17.55_04.png)
+
+Here you can see four different panels. The first panel is of type `StateMachine` and it is currently tracking the node `Player/StateMachine` that contains the child nodes of all the `Move` state. The property it is tracking is `_state_name`. This way I can monitor the move state it is in at all times during testing. Here is a section of the code relevant to the panel property it is tracking.
 
 ```GDscript
-extends "res://addons/gut/test.gd"
+extends Node
+class_name StateMachine, "res://GodotAssets/Icons/state_machine.svg"
+"""
+Generic State Machine. Initializes states and delgates engine callbacks
+(_physics_process, _unhandled_input) to the active state.
+"""
 
-var Player = preload("res://srcPreState/Actors/Player.gd")
+#allows the setting of an initial state from the inspector
+export var initial_state: = NodePath()
 
-func test_start_no_input_left():
-	var player = Player.new()
-	assert_eq(
-		false,
-		Input.is_action_pressed("move_left"),
-		"Start with no left input"
-	)
-
-func test_start_no_input_right():
-	var player = Player.new()
-	assert_eq(
-		false,
-		Input.is_action_pressed("move_right"),
-		"Start with no right input"
-	)
-
-func test_start_no_input_jump():
-	var player = Player.new()
-	assert_eq(
-		false,
-		Input.is_action_pressed("jump"),
-		"Start with no jump input"
-	)	
-
-func test_start_no_direction():
-	var player = Player.new()
-	assert_eq(
-		Vector2(0.0,0.0), 
-		player.get_direction(), 
-		"Player Starts Not Moving"
-	)
-
-func test_input_left():
-	var player = Player.new()
-	Input.action_press("move_left", 1.0)
-	assert_eq(
-		true, 
-		Input.is_action_pressed("move_left"),
-		"Left is pressed"
-	)
-	Input.action_release("move_left") 
-
-func test_input_right():
-	var player = Player.new()
-	Input.action_press("move_right", 1.0)
-	assert_eq(
-		true, 
-		Input.is_action_pressed("move_right"),
-		"Right is pressed"
-	)
-	Input.action_release("move_right") 
-
-func test_input_jump():
-	var player = Player.new()
-	Input.action_press("jump", 1.0)
-	assert_eq(
-		true, 
-		Input.is_action_pressed("jump"),
-		"Jump is pressed"
-	)
-	Input.action_release("jump") 
-
-func test_direction_left():
-	var player = Player.new()
-	Input.action_press("move_left", 1.0)
-	assert_eq(
-		Vector2(-1.0,0.0),
-		player.get_direction(),
-		"Player moves left when input pressed"
-	)
-	Input.action_release("move_left")
-	
-func test_direction_right():
-	var player = Player.new()
-	Input.action_press("move_right", 1.0)
-	assert_eq(
-		Vector2(1.0,0.0),
-		player.get_direction(),
-		"Player moves right when input pressed"
-	)
-	Input.action_release("move_right")
-
-func test_direction_jump():
-	var player = Player.new()
-	Input.action_press("jump", 1.0)
-	assert_eq(
-		false,
-		player.is_on_floor(),
-		"Player jumps when input pressed"
-	)
-	Input.action_release("jump")
+#active state variable that starts as the initial state and uses a setter to change
+onready var state: State = get_node(initial_state) setget set_state
+#allows for printing of state name for debugging
+onready var _state_name: = state.name
 ```
+The next panel is the same as before, but instead it is checking the state of the `StateMachine` whose children states are for the `Hook` object, `Aim` and `Fire`. As it is the same `StateMachine` script, just with different dependancies.
 
-While this was made before the State machine was implemented, it will be very easy to refactor the tests to better fit the code.
 
-## Expectations
 
-In order to make our unit testing more adaptable we are not going to be testing against **internal** states, i.e *Run, Idle, Move, Air*. Instead we will be testing against **external** states.
+The third panel tracks the three variables associated with `Move`and the child states `Idle`, `Run`, `Air`. These variables are the return value of the the functions that make up these move states.
 
-* Internal states are the states that the state machine uses to do its job
-* External states are states that can be reacted to by code using the state machine (events or side-effects caused by transition actions)
+The fourth panel is the same as the third, except instead of `Move` it tracks variables associated with the player as they are in the process of hooking.
 
-This is because if we wrote tests against the internal states, anytime we would refactor the internal states in our source code, we would then have to change our tests. However if we were to say, tests against an event argument that holds information on whether a specific state is happening, we could refactor source code and tests would not be affected. It would also be easy to adapt by just adding new indicators to our events.
+## Conclusion
 
-For example, say I wanted to test whether my character is moving or not, and I tested against the *Move* state (before creating child states *Idle, Run and Air*) so I write all my tests to assert whether I was in the *Move* state. Now, as I develop more of my game, I create the different child states of *Move*. Since I tested against the **internal** state, I would now have to go back and rewrite my tests. However, if I were to test against a signal that is emitted when the character moves, and another when the character is in the air, I would not have to change my tests, only add the *Air* signal to the event argument and assert.
+![images](images/Inked2021.04.20-18.26_LI.jpg)
 
-## Implementation
-
-By arranging our state machine properly, we can easily implement our testing method. We can code the state machine to be in the **external** state before any action we may want to test and then preform the state transition. This will allow us to easily assert whether the state machine made the correct calls.
-
-## Sources
-
-PlanetGeek - https://www.planetgeek.ch/2011/05/17/how-to-unit-test-finite-state-machines/
+Here is a diagram from the example above. In the main game scene tree you can see with just these four panels we cover almost all the content that has code attached to it. We can easily add more `Node` objects with properties and conditions to test.

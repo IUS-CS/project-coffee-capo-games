@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/UserInterface/PlayButton.gd" type="Script" id=1]
+[ext_resource path="res://GodotAssets/MenuAssets/PlayButtonMainMenu.png" type="Texture" id=2]
+
+
+[node name="ChangeSceneButton" type="Button"]
+margin_right = 161.0
+margin_bottom = 26.0
+size_flags_vertical = 3
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene_path = "res://src/Levels/RyanGTest.tscn"
+[connection signal="button_up" from="." to="." method="_on_button_up"]

@@ -8,7 +8,6 @@
 [ext_resource path="res://GodotAssets/FontData/Pixellari/Pixellari.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://GodotAssets/MenuAssets/MainMenuButton.png" type="Texture" id=7]
 
-
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 6 )
 
@@ -90,7 +89,7 @@ margin_top = 36.0
 margin_right = 172.0
 margin_bottom = 68.0
 icon = ExtResource( 7 )
-next_scene_path = "res://srcPreState/Screens/MainScreen.tscn"
+next_scene_path = "res://src/Main/MainScreenFinal.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
 margin_top = 72.0

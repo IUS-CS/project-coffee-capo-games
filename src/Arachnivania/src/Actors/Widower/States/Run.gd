@@ -28,6 +28,12 @@ func physics_process(delta: float) -> void:
 	elif not owner.is_on_floor():
 		_state_machine.transition_to("Move/Air")
 	#delegates physics process to move
+	var direction = move.get_move_direction()
+	if direction.x != 0.0:
+		owner.animationPlayer.play("Walk")
+		owner.sprite.flip_h = direction.x < 0.0
+	else:
+		owner.animationPlayer.play("Stand")
 	move.physics_process(delta)
 
 #Base interface function from state to delegate to the parent state Move

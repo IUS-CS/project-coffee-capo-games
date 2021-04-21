@@ -19,8 +19,6 @@
 [ext_resource path="res://srcPreState/Objects/Portal2D.tscn" type="PackedScene" id=17]
 [ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=18]
 [ext_resource path="res://GodotAssets/Music (.ogg)/Metroid AM2R Return of Samus OST Surface of SR388.ogg" type="AudioStream" id=19]
-[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=18]
-
 
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
